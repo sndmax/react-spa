@@ -1,7 +1,6 @@
 .ItemsList {
     list-style: none;
 }
-
 .ItemsList li {
     display: inline;
     margin: 0 10px;

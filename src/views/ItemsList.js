@@ -11,7 +11,7 @@ class ItemsList extends Component {
     render() {
         return (
             <div>
-                <h2>{this.props.data.title}</h2>
+                <h2>{ this.props.data.title }</h2>
                 <ul className="ItemsList">
                     {
                         this.props.data.items.map(function (item) {
