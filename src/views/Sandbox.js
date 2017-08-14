@@ -47,45 +47,6 @@ const comment = {
     }
 };
 
-class Clock extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            date: new Date()
-        };
-
-        this.increment = parseInt(props.increment);
-
-        //this.update = this.update.bind(this);
-    }
-
-    componentDidMount() {
-        this.timerId = setInterval(
-            () => this.tick(),
-            1000
-        )
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timerId);
-    }
-
-    tick() {
-        this.setState({
-            date: new Date()
-        });
-    }
-
-    render() {
-        return (
-            <div>
-                <h2>Curent time: {this.state.date.toLocaleTimeString()}</h2>
-            </div>
-        );
-    }
-}
-
 class Toggle extends Component {
     constructor(props) {
         super(props);
@@ -93,8 +54,6 @@ class Toggle extends Component {
             isToggleOn: true,
             counter: 0
         };
-
-        //this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
@@ -117,7 +76,7 @@ class Toggle extends Component {
     render() {
         return (
             <div>
-                <h3>Counter: {this.state.counter}</h3>
+                < h3>Counter: {this.state.counter}</h3>
                 <button onClick={(e) => this.handleClick(e)}>
                     {this.state.isToggleOn ? 'ON' : 'OFF'}
                 </button>
@@ -157,13 +116,10 @@ class Sandbox extends Component {
                     date={comment.date}
                     text={comment.text}
                     author={comment.author} />
-                <Clock />
                 <Toggle increment='1' />
             </div>
         );
     }
 }
-
-
 
 export default Sandbox;

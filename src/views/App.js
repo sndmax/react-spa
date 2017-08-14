@@ -5,6 +5,7 @@ import ItemsList from './ItemsList';
 import Sandbox from './Sandbox';
 import LoginControl from './Account';
 import Warning from './Alerts';
+import Time from './Time';
 
 class App extends Component {
     render() {
@@ -30,6 +31,7 @@ class App extends Component {
                     <div style={afterStyle}/>
                     <img src={logo} className="App-logo" alt="logo"/>
                     <LoginControl />
+                    <Time />
                 </div>
                 <ItemsList data={itemList}/>
                 <Sandbox />
