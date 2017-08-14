@@ -52,13 +52,12 @@ class Clock extends Component {
         super(props);
 
         this.state = {
-            date: new Date(),
-            counter: 0
+            date: new Date()
         };
 
         this.increment = parseInt(props.increment);
 
-        this.update = this.update.bind(this);
+        //this.update = this.update.bind(this);
     }
 
     componentDidMount() {
@@ -78,24 +77,79 @@ class Clock extends Component {
         });
     }
 
-    update() {
-        this.setState((prevState, props) => ({
-            counter: prevState.counter + parseInt(props.increment)
+    render() {
+        return (
+            <div>
+                <h2>Curent time: {this.state.date.toLocaleTimeString()}</h2>
+            </div>
+        );
+    }
+}
+
+class Toggle extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isToggleOn: true,
+            counter: 0
+        };
+
+        //this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
         }));
+    }
+
+    update(e) {
+        e.preventDefault();
+
+        if(this.state.isToggleOn) {
+            this.setState((prevState, props) => ({
+                counter: prevState.counter + parseInt(props.increment)
+            }));
+        }
+
     }
 
     render() {
         return (
             <div>
-                <h2>Curent time: {this.state.date.toLocaleTimeString()}</h2>
                 <h3>Counter: {this.state.counter}</h3>
-                <button onClick={this.update}>Click</button>
+                <button onClick={(e) => this.handleClick(e)}>
+                    {this.state.isToggleOn ? 'ON' : 'OFF'}
+                </button>
+                <button onClick={(e) => this.update(e)}>Click</button>
             </div>
         );
     }
 }
 
 class Sandbox extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            comments: []
+        }
+    }
+/*
+    componentDidMount() {
+        fetchPosts().then(response => {
+            this.setState({
+                posts: response.posts
+            });
+        });
+
+        fetchComments().then(response => {
+            this.setState({
+                comments: response.comments
+            });
+        });
+    }
+*/
     render() {
         return (
             <div>
@@ -103,7 +157,8 @@ class Sandbox extends Component {
                     date={comment.date}
                     text={comment.text}
                     author={comment.author} />
-                <Clock increment='1' />
+                <Clock />
+                <Toggle increment='1' />
             </div>
         );
     }
