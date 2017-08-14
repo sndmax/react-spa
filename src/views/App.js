@@ -4,6 +4,7 @@ import './App.css';
 import ItemsList from './ItemsList';
 import Sandbox from './Sandbox';
 import LoginControl from './Account';
+import Warning from './Alerts';
 
 class App extends Component {
     render() {
@@ -18,9 +19,15 @@ class App extends Component {
             ]
         };
 
+        const afterStyle = {
+            clear: 'both'
+        };
+
         return (
             <div className="App">
                 <div className="App-header">
+                    <Warning />
+                    <div style={afterStyle}/>
                     <img src={logo} className="App-logo" alt="logo"/>
                     <LoginControl />
                 </div>

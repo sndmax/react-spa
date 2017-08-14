@@ -30,7 +30,6 @@ function LogoutButton(props) {
     )
 }
 
-
 function Greeting(props) {
     const isLoggedIn = props.isLoggedIn;
 
@@ -55,7 +54,7 @@ function Mailbox(props) {
 
 const messages = ['React', 'Re: React'];
 
-class LoginControl extends React.Component {
+class LoginControl extends Component {
     constructor(props) {
         super(props);
         this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -74,16 +73,14 @@ class LoginControl extends React.Component {
     render() {
         const isLoggedIn = this.state.isLoggedIn;
 
-        let button = null;
-        if (isLoggedIn)
-            button = <LogoutButton onClick={this.handleLogoutClick} />;
-        else
-            button = <LoginButton onClick={this.handleLoginClick} />;
-
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
-                {button}
+                {
+                    isLoggedIn ?
+                    (<LogoutButton onClick={this.handleLogoutClick} />) :
+                    (<LoginButton onClick={this.handleLoginClick} />)
+                }
             </div>
         );
     }

@@ -1,0 +1,16 @@
+.Warning {
+    z-index: 1;
+    color: #fff;
+}
+
+.Warning-content {
+    background: #00d8ff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.Warning a {
+    color: #fff;
+    float: right;
+    padding: 10px;
+}
