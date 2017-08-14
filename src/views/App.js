@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from '../logo.svg';
 import './App.css';
 import ItemsList from './ItemsList';
+import Sandbox from './Sandbox';
 
 class App extends Component {
     render() {
@@ -14,7 +15,7 @@ class App extends Component {
                 "item4",
                 "item5"
             ]
-        }
+        };
 
         return (
             <div className="App">
@@ -23,6 +24,7 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
                 <ItemsList data={itemList}/>
+                <Sandbox />
             </div>
         );
     }
