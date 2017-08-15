@@ -1,5 +1,5 @@
 {
-  "name": "react-spa-1",
+  "name": "react-spa",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,10 +12,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-jsx-a11y": "^6.0.2"
   }
 }
