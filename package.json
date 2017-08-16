@@ -9,8 +9,8 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "dev": "react-scripts build --NODE_ENV=development&& webpack",
-    "prod": "react-scripts build webpack",
+    "dev": "react-scripts build --NODE_ENV=development&& webpack --config webpack.config.js && webpack-dev-server",
+    "prod": "react-scripts build webpack --config webpack.config.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

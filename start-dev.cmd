@@ -1,1 +1,0 @@
-npm run dev & webpack --config webpack.config.js & .\node_modules\.bin\webpack-dev-server

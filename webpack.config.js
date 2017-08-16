@@ -18,7 +18,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: 'C:\\Users\\Maksim_Kviatsinski\\react-spa\\build'
+        path: path.resolve(__dirname, './build')
     },
     resolve: {
         extensions: ['.js', '.jsx']
