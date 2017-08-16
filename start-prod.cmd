@@ -1,0 +1,1 @@
+npm run prod & webpack --config webpack.config.js
