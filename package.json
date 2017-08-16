@@ -9,7 +9,7 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "dev": "set isDev=development&& webpack --config webpack.config.js && webpack-dev-server",
+    "dev": "set NODE_ENV=development&& webpack --config webpack.config.js && webpack-dev-server",
     "prod": "webpack --config webpack.config.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
