@@ -1,20 +1,19 @@
-var webpack = require('webpack');
-var path = require('path');
-var NODE_ENV = process.env.NODE_ENV === 'Development';
+const webpack = require('webpack');
+const path = require('path');
+const isDev = process.env.isDev === 'Development';
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
-    disable: process.env.NODE_ENV === 'Development'
+    disable: isDev
 });
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
-module.exports = {
+config = {
     context: __dirname,
     entry: {
         app: 'react-hot-loader/patch',
-        bundle: './src/index.js',
-        styles: './src/index.scss'
+        bundle: './src/index.js'
     },
     output: {
         filename: '[name].js',
@@ -60,7 +59,7 @@ module.exports = {
             allChunks: true
         })
     ],
-    devtool: (NODE_ENV ? 'source-map' : false),
+    devtool: (isDev ? 'source-map' : false),
     devServer: {
         contentBase: path.join(__dirname, 'build'),
         compress: true,
@@ -68,11 +67,13 @@ module.exports = {
     }
 };
 
-if (!NODE_ENV) {
-    module.exports.plugins.push(new UglifyJSPlugin({
+if (!isDev) {
+    config.plugins.push(new UglifyJSPlugin({
         compress: {
             warnings: false
         },
         exclude: /.\.min\.js$/i
     }));
 }
+
+module.exports = config;
