@@ -11,9 +11,7 @@ if (module.hot) {
     module.hot.accept('./App', () => {
         const NextApp = require('./App').default;
         ReactDOM.render(
-            <AppContainer>
-                <NextApp />
-            </AppContainer>,
+            <NextApp />,
             document.getElementById('root')
         );
     });

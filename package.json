@@ -9,7 +9,7 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "dev": "set NODE_ENV=development&& webpack --config webpack.config.js && webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development&& webpack --config webpack.config.js && webpack-dev-server",
     "prod": "webpack --config webpack.config.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -25,6 +25,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "bootstrap-sass": "^3.3.7",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "node-sass": "^4.5.3",
