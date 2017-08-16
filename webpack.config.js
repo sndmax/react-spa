@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
-const isDev = process.env.isDev === 'Development';
+const isDev = process.env.NODE_ENV === 'development';
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
-    disable: isDev
+    disable: NODE_ENV
 });
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
