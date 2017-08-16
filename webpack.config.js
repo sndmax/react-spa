@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
-    disable: NODE_ENV
+    disable: isDev
 });
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
