@@ -6,6 +6,8 @@ import Sandbox from './Sandbox';
 import LoginControl from './Account';
 import Warning from './Alerts';
 import Time from './Time';
+import Blog from './Blog';
+import Form from './Form';
 
 class App extends Component {
     render() {
@@ -33,8 +35,10 @@ class App extends Component {
                     <LoginControl />
                     <Time />
                 </div>
-                <ItemsList data={itemList}/>
-                <Sandbox />
+                <ItemsList- data={itemList}/>
+                <Sandbox- />
+                <Blog />
+                <Form />
             </div>
         );
     }

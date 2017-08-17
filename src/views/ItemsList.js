@@ -15,7 +15,7 @@ class ItemsList extends Component {
                 <ul className="ItemsList">
                     {
                         this.props.data.items.map(function (item) {
-                            return <Item key={item} name={item}/>
+                            return <Item key={item.toString()} name={item}/>
                         })
                     }
                 </ul>
