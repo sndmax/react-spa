@@ -10,9 +10,7 @@ export default function(props) {
                     <Link to="/posts">Posts</Link>
                 </aside>
             </header>
-            <main>
-                {props.children}
-            </main>
+            <div>{props.children}</div>
         </div>
     );
 };
