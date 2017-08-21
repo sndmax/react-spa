@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
 import MainLayout from './components/layouts/main-layout';

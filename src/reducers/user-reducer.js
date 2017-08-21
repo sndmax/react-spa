@@ -5,7 +5,7 @@ const initialState = {
     userProfile: {
         repos: []
     }
-}
+};
 
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -13,9 +13,9 @@ const userReducer = (state = initialState, action) => {
             return Object.assign({}, state, {users: action.users});
         case types.USER_PROFILE_SUCCESS:
             return Object.assign({}, state, {userProfile: action.userProfile});
+        default:
+            return state;
     }
-
-    return state;
 };
 
 export default userReducer;

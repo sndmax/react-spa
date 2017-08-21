@@ -1,7 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default (props) => {
     return (
-        <div>Posts...</div>
+        <div>{props.posts.map(post => {
+            return (
+                <div key={post.id}>
+                    <h1>{post.title}</h1>
+                    <div>{post.content}</div>
+                </div>
+            )
+        })}</div>
     );
 }

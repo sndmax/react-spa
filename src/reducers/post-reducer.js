@@ -13,9 +13,9 @@ const postReducer = (state = initialState, action) => {
             return Object.assign({}, state, {posts: action.posts});
         case types.POST_SUCCESS:
             return Object.assign({}, state, {post: action.post});
+        default:
+            return state;
     }
-
-    return state;
 };
 
 export default postReducer;

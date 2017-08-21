@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PostList from '../views/post-list';
-import store from '../../store';
-import { getPostsSuccess } from '../../actions/post-actions';
+import * as postApi from '../../api/posts-api';
 
 class PostListContainer extends Component {
 
     componentDidMount() {
-        store.dispatch(getPostsSuccess('posts'))
+        postApi.getPosts();
+        //store.dispatch(getPostsSuccess('posts'))
     };
 
     render() {
         return (
-            <PostList/>
+            <PostList posts={this.props.posts} />
         );
     }
 }

@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "title 1",
+      "author": "author 1",
+      "date": 134151356315,
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque autem consequuntur dolorum esse, eum explicabo id inventore iste labore maiores modi neque nisi nobis quam quos, ratione repudiandae vel."
+    },
+    {
+      "id": 2,
+      "title": "title 2",
+      "author": "author 2",
+      "date": 1341513565,
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque autem consequuntur dolorum esse, eum explicabo id inventore iste labore maiores modi neque nisi nobis quam quos, ratione repudiandae vel."
+    },
+    {
+      "id": 3,
+      "title": "title 3",
+      "author": "author 3",
+      "date": 134154231513565,
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque autem consequuntur dolorum esse, eum explicabo id inventore iste labore maiores modi neque nisi nobis quam quos, ratione repudiandae vel."
+    }
+  ]
+}
