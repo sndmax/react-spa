@@ -20,6 +20,14 @@ config = {
         path: path.resolve(__dirname, './build')
     },
     resolve: {
+        alias: {
+            actions: path.resolve(__dirname, 'src/actions'),
+            api: path.resolve(__dirname, 'src/api'),
+            containers: path.resolve(__dirname, 'src/components/containers'),
+            layouts: path.resolve(__dirname, 'src/components/layouts'),
+            views: path.resolve(__dirname, 'src/components/views'),
+            reducers: path.resolve(__dirname, 'src/reducers')
+        },
         extensions: ['.js', '.jsx']
     },
     module: {

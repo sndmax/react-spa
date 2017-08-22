@@ -1,4 +1,4 @@
-import * as types from '../actions/action-types';
+import { GET_POSTS_SUCCESS, POST_SUCCESS } from 'actions/action-types';
 
 const initialState = {
     posts: [],
@@ -9,10 +9,10 @@ const initialState = {
 
 const postReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.GET_POSTS_SUCCESS:
-            return Object.assign({}, state, {posts: action.posts});
-        case types.POST_SUCCESS:
-            return Object.assign({}, state, {post: action.post});
+        case GET_POSTS_SUCCESS:
+            return Object.assign({}, state, {posts: action.payload});
+        case POST_SUCCESS:
+            return Object.assign({}, state, {post: action.payload});
         default:
             return state;
     }

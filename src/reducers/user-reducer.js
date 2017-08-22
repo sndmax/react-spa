@@ -1,4 +1,4 @@
-import * as types from '../actions/action-types';
+import { GET_USERS_SUCCESS, USER_PROFILE_SUCCESS } from 'actions/action-types';
 
 const initialState = {
     users: [],
@@ -9,10 +9,10 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.GET_USERS_SUCCESS:
-            return Object.assign({}, state, {users: action.users});
-        case types.USER_PROFILE_SUCCESS:
-            return Object.assign({}, state, {userProfile: action.userProfile});
+        case GET_USERS_SUCCESS:
+            return Object.assign({}, state, {users: action.payload});
+        case USER_PROFILE_SUCCESS:
+            return Object.assign({}, state, {userProfile: action.payload});
         default:
             return state;
     }

@@ -1,0 +1,44 @@
+@import '../../index.scss';
+
+.article-body {
+  margin: 90px 0;
+
+  a {
+    text-decoration: none;
+    color: $base-font-color;
+
+    &:hover {
+      color: $primary-font-color;
+    }
+  }
+}
+
+.article-title {
+  margin: 12px 0;
+  font-size: 36px;
+  letter-spacing: 4px;
+  text-transform: none;
+  line-height: 1.5em;
+}
+
+.article-more {
+  font-weight: 600;
+}
+
+.article-date,
+.article-info {
+  color: $primary-font-color;
+  letter-spacing: $primary-spacing;
+
+  span {
+    background: #c8c8c8;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 0 5px;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+      background: #fff;
+    }
+  }
+}

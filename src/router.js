@@ -3,14 +3,15 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
 import MainLayout from './components/layouts/main-layout';
 
-import Home from './components/home';
+import About from './components/views/about';
 import PostListContainer from './components/containers/post-list-container';
 
 export default (
     <BrowserRouter>
         <MainLayout>
             <Switch>
-                <Route path="/home" component={Home} />
+                <Route exact path="/" />
+                <Route path="/about" component={About} />
                 <Route path="/posts" component={PostListContainer} />
             </Switch>
         </MainLayout>

@@ -1,15 +1,15 @@
-import * as types from '../actions/action-types';
+import { GET_POSTS_SUCCESS, POST_SUCCESS } from 'actions/action-types';
 
-export function getPostsSuccess(posts) {
+export const getPostsSuccess = (posts) => {
     return {
-        type: types.GET_POSTS_SUCCESS,
-        posts
-    };
-}
-
-export function postSuccess(post) {
-    return {
-        type: types.POST_SUCCESS,
-        post
+        type: GET_POSTS_SUCCESS,
+        payload: posts
     }
-}
+};
+
+export const postSuccess = (post) => {
+    return {
+        type: POST_SUCCESS,
+        payload: post
+    }
+};

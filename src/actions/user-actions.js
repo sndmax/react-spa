@@ -1,15 +1,15 @@
-import * as types from '../actions/action-types';
+import { GET_USERS_SUCCESS, USER_PROFILE_SUCCESS } from 'actions/action-types';
 
-export function getUsersSuccess(users) {
+export const getUsersSuccess = (users) => {
     return {
-        type: types.GET_USERS_SUCCESS,
-        users
-    };
-}
-
-export function userProfileSuccess(userProfile) {
-    return {
-        type: types.USER_PROFILE_SUCCESS,
-        userProfile
+        type: GET_USERS_SUCCESS,
+        payload: users
     }
-}
+};
+
+export const userProfileSuccess = (userProfile) => {
+    return {
+        type: USER_PROFILE_SUCCESS,
+        payload: userProfile
+    }
+};
