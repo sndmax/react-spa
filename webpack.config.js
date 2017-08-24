@@ -26,7 +26,9 @@ config = {
             containers: path.resolve(__dirname, 'src/components/containers'),
             layouts: path.resolve(__dirname, 'src/components/layouts'),
             views: path.resolve(__dirname, 'src/components/views'),
-            reducers: path.resolve(__dirname, 'src/reducers')
+            reducers: path.resolve(__dirname, 'src/reducers'),
+            variables: path.resolve(__dirname, 'src/utility/_variables.scss'),
+            mixins: path.resolve(__dirname, 'src/utility/_mixins.scss')
         },
         extensions: ['.js', '.jsx']
     },
@@ -38,7 +40,7 @@ config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react', 'es2015'],
+                        presets: ['react', 'es2015', "stage-1"],
                         plugins: [
                             'react-hot-loader/babel'
                         ]
@@ -49,16 +51,29 @@ config = {
                 test: /\.scss$/,
                 use: extractSass.extract({
                     use: [{
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
                     }, {
                         loader: 'sass-loader'
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: (loader) => [
+                                require('autoprefixer')()
+                            ]
+                        }
                     }],
                     fallback: 'style-loader'
                 })
             },
             {
-                test: /\.svg$/,
-                loader: 'svg-inline-loader'
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                    'url-loader?limit=10000',
+                    'img-loader'
+                ]
             }
         ]
     },

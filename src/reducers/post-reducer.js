@@ -1,18 +1,20 @@
-import { GET_POSTS_SUCCESS, POST_SUCCESS } from 'actions/action-types';
+import { GET_POSTS_SUCCESS, GET_POSTS_WAITING, POST_SUCCESS, POST_WAITINIG } from 'actions/action-types';
 
 const initialState = {
     posts: [],
-    post: {
-        repos: []
-    }
+    post: null
 };
 
 const postReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_POSTS_SUCCESS:
-            return Object.assign({}, state, {posts: action.payload});
+            return { ...state, posts: action.payload };
+        case GET_POSTS_WAITING:
+            return action.payload;
         case POST_SUCCESS:
-            return Object.assign({}, state, {post: action.payload});
+            return { ...state, post: action.payload };
+        case POST_WAITINIG:
+            return action.payload;
         default:
             return state;
     }

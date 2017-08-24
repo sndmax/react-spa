@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PostList from 'views/post-list';
+import Articles from 'views/Articles';
+import PreLoader from 'views/PreLoader';
 import * as postApi from 'api/posts-api';
 
 class PostListContainer extends Component {
@@ -11,15 +12,19 @@ class PostListContainer extends Component {
 
     render() {
         const { posts } = this.props;
+
+        if(!posts)
+            return <PreLoader />;
+
         return (
-            <PostList posts={posts} />
+            <Articles posts={posts} />
         );
     }
 }
 
 const mapStateToProps = (store) => {
     return {
-        posts: store.postState.posts
+        posts: ( store.postState !== null ) ? store.postState.posts : null
     }
 };
 
