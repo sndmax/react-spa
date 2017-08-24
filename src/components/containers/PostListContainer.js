@@ -2,29 +2,34 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Articles from 'views/Articles';
 import PreLoader from 'views/PreLoader';
-import * as postApi from 'api/posts-api';
+import { getPosts } from 'actions/posts';
 
 class PostListContainer extends Component {
 
     componentDidMount() {
-        postApi.getPosts();
+        const { dispatch } = this.props;
+
+        dispatch(getPosts('http://localhost:9000/posts.json'));
     };
 
     render() {
-        const { posts } = this.props;
-
-        if(!posts)
-            return <PreLoader />;
+        const { hasError, isFetching, posts } = this.props;
 
         return (
-            <Articles posts={posts} />
+            <div>
+                { hasError && <p>There was an error loading the items</p> }
+                { isFetching && <PreLoader /> }
+                { posts && <Articles posts={posts.posts} /> }
+            </div>
         );
     }
 }
 
 const mapStateToProps = (store) => {
     return {
-        posts: ( store.postState !== null ) ? store.postState.posts : null
+        posts: store.posts.posts,
+        hasError: store.hasError,
+        isFetching: store.isFetching
     }
 };
 

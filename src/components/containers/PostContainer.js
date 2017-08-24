@@ -1,29 +1,36 @@
+//DISABLED
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Article from 'views/Article';
-import PreLoader from 'views/PreLoader';
-import * as postApi from 'api/posts-api';
+import Articles from 'views/Articles';
+import { getPosts } from 'actions/posts';
 
-class PostContainer extends Component {
+class PostListContainer extends Component {
+
     componentDidMount() {
-        const { id } = this.props.match.params;
-        postApi.getPost(id);
+        const { dispatch } = this.props;
+
+        dispatch(getPosts('http://localhost:9000/posts.json'));
     };
 
     render() {
-        const { post } = this.props;
+        const { hasError, isFetching, posts } = this.props;
 
-        if(!post)
-            return <PreLoader />;
-
-        return <Article post={post} />
+        return (
+            <div>
+                { hasError && <p>There was an error loading the items</p> }
+                { isFetching && <p>Loading...</p> }
+                { posts && <Articles posts={posts.posts} /> }
+            </div>
+        );
     }
 }
 
 const mapStateToProps = (store) => {
     return {
-        post: ( store.postState !== null  ) ? store.postState.post : null
+        posts: store.posts.posts,
+        hasError: store.hasError,
+        isFetching: store.isFetching
     }
 };
 
-export default connect(mapStateToProps)(PostContainer);
+export default connect(mapStateToProps)(PostListContainer);
