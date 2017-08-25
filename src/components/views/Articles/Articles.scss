@@ -1,0 +1,77 @@
+@import '~variables';
+@import '~mixins';
+
+.article-body {
+  @include marg(90px 0);
+
+  a {
+    color: $base-font-color;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $primary-font-color;
+    }
+  }
+}
+
+.article-title {
+  @include marg(12px 0);
+
+  font-size: $primary-font-size;
+  letter-spacing: $primary-letter-spacing;
+  line-height: $primary-line-height;
+  text-transform: none;
+
+  cursor: pointer;
+}
+
+.article-dot {
+  @include marg(0 10px);
+
+  &:after {
+    content: '●';
+  }
+}
+
+.article-arrow{
+  &:after {
+    content: '→';
+  }
+}
+
+.article-more {
+  font-weight: $primary-font-weight;
+  cursor: pointer;
+}
+
+.article-date {
+  color: $primary-font-color;
+  letter-spacing: $primary-letter-spacing;
+}
+
+.article-info {
+  a {
+    @extend .article-date;
+
+    &:hover {
+      color: $base-font-color;
+    }
+
+    span {
+      @include pad(2px 5px);
+      @include marg(0 5px);
+
+      background: $tags-bg-color;
+      color: $wh;
+
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-font-color;
+        background: $wh;
+      }
+    }
+  }
+}

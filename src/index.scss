@@ -1,6 +1,32 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif; }
+@import '~variables';
+@import '~mixins';
 
-/*# sourceMappingURL=index.css.map */
+body {
+  @include marg(0);
+  @include pad(0);
+  background-size: cover;
+
+  background: url(./bg.jpg) no-repeat center center fixed;
+  color: $base-font-color;
+
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  letter-spacing: $base-letter-spacing;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3 {
+  @include marg(1em 0 .5em);
+
+  text-rendering: optimizeLegibility;
+}
+
+#page {
+  @include marg(auto);
+  @include pad(0 32px);
+
+  box-sizing: border-box;
+  width: auto;
+  max-width: 1020px;
+}
