@@ -24,7 +24,9 @@ h1, h2, h3 {
 
 #page {
   @include marg(auto);
-  @include pad(0 32px);
+  @include pad(1px 32px);
+
+  background: $content-bg-color;
 
   box-sizing: border-box;
   width: auto;

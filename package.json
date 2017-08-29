@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.15.4",
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -16,10 +17,11 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development && webpack --config webpack.config.js && webpack-dev-server",
-    "prod": "webpack --config webpack.config.js"
+    "dev": "webpack --config webpack.dev.config.js && cross-env NODE_ENV=development node server.js",
+    "prod": "webpack -p --config webpack.config.js && node server.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
@@ -27,13 +29,13 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "bootstrap-sass": "^3.3.7",
+    "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.3.1",
     "img-loader": "^2.0.0",
-    "json-loader": "^0.5.7",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react": "^15.6.1",
@@ -42,8 +44,9 @@
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "svg-inline-loader": "^0.8.0",
     "webpack": "^3.5.4",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-hot-middleware": "^2.18.2"
   }
 }

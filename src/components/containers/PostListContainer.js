@@ -9,7 +9,7 @@ class PostListContainer extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
 
-        dispatch(getPosts('http://localhost:9000/posts.json'));
+        dispatch(getPosts('/posts.json'));
     };
 
     render() {
