@@ -9,7 +9,7 @@ class Articles extends Component {
         const symbolsAmount = 300;
 
         return (
-            <section>
+            <div>
                 {posts.map(({ id, date, title, author, tags, content }) => {
                     const pub_date = new Date(date * 1000).toDateString();
                     const shortContent = content.substr(0, symbolsAmount);
@@ -32,7 +32,7 @@ class Articles extends Component {
                         </article>
                     )
                 })}
-            </section>
+            </div>
 
         )
     }

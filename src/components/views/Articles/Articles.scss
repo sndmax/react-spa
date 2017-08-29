@@ -4,6 +4,14 @@
 .article-body {
   @include marg(90px 0);
 
+  &:first-child {
+    @include marg(0 0 90px 0);
+  }
+
+  &:last-child {
+    @include marg(90px 0 0 0);
+  }
+
   a {
     color: $base-font-color;
     text-decoration: none;

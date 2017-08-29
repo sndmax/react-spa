@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import { hasError, isFetching, posts } from './posts';
+import { isFetching, posts } from './posts';
 
 var reducers = combineReducers({
-    posts,
-    hasError,
-    isFetching
+    posts
 });
 
 export default reducers;

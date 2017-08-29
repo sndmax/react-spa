@@ -13,14 +13,14 @@ class PostListContainer extends Component {
     };
 
     render() {
-        const { hasError, isFetching, posts } = this.props;
+        const { status, posts } = this.props;
 
         return (
-            <div>
-                { hasError && <p>There was an error loading the items</p> }
-                { isFetching && <PreLoader /> }
+            <section>
+                { (status == 'error') && <p>There was an error loading the items</p> }
+                { (status == 'loading') && <PreLoader /> }
                 { posts && <Articles posts={posts.posts} /> }
-            </div>
+            </section>
         );
     }
 }
@@ -28,8 +28,7 @@ class PostListContainer extends Component {
 const mapStateToProps = (store) => {
     return {
         posts: store.posts.posts,
-        hasError: store.hasError,
-        isFetching: store.isFetching
+        status: store.posts.status
     }
 };
 
