@@ -9,17 +9,30 @@ class PostListContainer extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
 
-        dispatch(getPosts('/posts.json'));
+        dispatch(getPosts());
     };
 
-    render() {
+    getContent() {
         const { status, posts } = this.props;
+
+        switch(status) {
+            case 'ERROR':
+                return <p>There was an error loading the items</p>;
+
+            case 'LOADING':
+                return  <PreLoader />;
+
+            case 'DONE':
+                return <Articles posts={posts.posts} />;
+        }
+
+    }
+
+    render() {
 
         return (
             <section>
-                { (status == 'error') && <p>There was an error loading the items</p> }
-                { (status == 'loading') && <PreLoader /> }
-                { posts && <Articles posts={posts.posts} /> }
+                { this.getContent() }
             </section>
         );
     }
@@ -27,7 +40,7 @@ class PostListContainer extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        posts: store.posts.posts,
+        posts: store.posts.data,
         status: store.posts.status
     }
 };

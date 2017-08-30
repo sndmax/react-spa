@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { isFetching, posts } from './posts';
+import { posts } from './posts';
 
 var reducers = combineReducers({
     posts
