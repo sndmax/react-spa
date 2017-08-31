@@ -1,18 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.scss';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import store from './store';
+import router from './router';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
-
-if (module.hot) {
-    module.hot.accept('./App', () => {
-        const NextApp = require('./App').default;
-        ReactDOM.render(
-            <NextApp />,
-            document.getElementById('root')
-        );
-    });
-}
+ReactDOM.render(<Provider store={store}>{router}</Provider>, document.getElementById('root'));

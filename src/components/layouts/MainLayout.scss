@@ -1,0 +1,11 @@
+@import '~variables';
+@import '~mixins';
+
+.app-header {
+  display: flex;
+  @include marg(0 20px);
+
+  width: 97vw;
+
+  justify-content: space-between;
+}
