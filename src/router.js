@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
-
-import MainLayout from 'layouts/MainLayout';
+import MainLayout from 'views/LayoutMain';
 
 import Home from 'views/Home';
 import About from 'views/About';
-import PostListContainer from 'containers/PostListContainer';
+import PostsContainer from 'containers/PostsContainer';
+import PostContainer from 'containers/PostContainer';
 
 export default (
     <BrowserRouter>
@@ -13,7 +13,8 @@ export default (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/posts" component={PostListContainer} />
+                <Route path="/posts" component={PostsContainer} />
+                <Route path="/post/:id" component={PostContainer} />
             </Switch>
         </MainLayout>
     </BrowserRouter>

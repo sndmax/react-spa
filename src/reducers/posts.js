@@ -1,5 +1,5 @@
-import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE } from 'actions/actionTypes';
-import { STATUS_ERROR, STATUS_LOADING, STATUS_DONE } from 'actions/actionStatuses';
+import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POST_SUCCESS, GET_POSTS_FAILURE } from 'constants/actionTypes';
+import { STATUS_ERROR, STATUS_LOADING, STATUS_DONE, STATUS_DONE_SINGLE } from 'constants/actionStatuses';
 
 export const posts = (state = [], action) => {
     const { type, payload } = action;
@@ -21,7 +21,14 @@ export const posts = (state = [], action) => {
             return {
                 ...state,
                 status: STATUS_DONE,
-                data: payload
+                items: payload
+            };
+
+        case GET_POST_SUCCESS:
+            return {
+                ...state,
+                status: STATUS_DONE_SINGLE,
+                items: payload
             };
 
         default:

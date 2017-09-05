@@ -1,4 +1,4 @@
-import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE } from 'actions/actionTypes';
+import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POST_SUCCESS, GET_POSTS_FAILURE } from 'constants/actionTypes';
 
 const url = '/data.json';
 
@@ -8,9 +8,9 @@ const getPostsRequest = () => {
     }
 };
 
-const getPostsSuccess = (posts) => {
+const getPostsSuccess = (posts, isSingle = false) => {
     return {
-        type: GET_POSTS_SUCCESS,
+        type: isSingle ? GET_POST_SUCCESS : GET_POSTS_SUCCESS,
         payload: posts
     }
 };
@@ -34,7 +34,30 @@ export const getPosts = () => {
                 return response;
             })
             .then((response) => response.json())
-            .then((posts) => dispatch(getPostsSuccess(posts)))
-            .catch((response) => dispatch(getPostsFailure()));
+            .then((response) => dispatch(getPostsSuccess(response.posts)))
+            .catch((response) => dispatch(getPostsFailure(response)));
     };
+};
+
+export const getPost = (id) => {
+    return(dispatch) => {
+        dispatch(getPostsRequest());
+
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+
+                return response;
+            })
+            .then((response) => response.json())
+            .then((response) => {
+                response.posts.map((post) => {
+                    if(id == post.id)
+                        dispatch(getPostsSuccess(post, true))
+                })
+            })
+            .catch((response) => dispatch(getPostsFailure(response)));
+    }
 };
