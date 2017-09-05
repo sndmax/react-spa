@@ -40,15 +40,13 @@ export const getSign = (values, dispatch) => {
             const usersArr = (users.users).map((user) => user.email);
             if(!usersArr.includes(values.username)) {
                 throw new SubmissionError({
-                    username: 'User with such email does not exist',
-                    _error: 'Login failed!'
+                    _error: 'Login failed, user with such email does not exist'
                 });
             } else users.users.map((user) => {
-                if(user.email == values.username)
-                    if(!(user.password == values.password))
+                if (user.email === values.username)
+                    if (!(user.password === values.password))
                         throw new SubmissionError({
-                            password: 'Wrong password',
-                            _error: 'Login failed'
+                            _error: 'Login failed, wrong password!'
                         });
             });
             dispatch(getSignSuccess(values));

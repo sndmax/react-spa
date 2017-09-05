@@ -39,7 +39,7 @@ class MainLayout extends Component {
                     {children}
                 </main>
             </div>
-        )
+        );
     }
 }
 

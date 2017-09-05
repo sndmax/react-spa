@@ -13,7 +13,10 @@ const renderField = ({ input, label, type }) =>
 class SignUpContainer extends Component {
     render() {
         const { status, data, error, handleSubmit, submitting } = this.props;
-        const errorMsg = status == 'error' ? data.errors._error : false;
+        const errorMsg = status === 'error' ? data.errors._error : false;
+        if (status === 'done') {
+            window.location = '/posts';
+        }
         return (
             <section>
                 <form className="auth-form" onSubmit={handleSubmit(getSign)}>
@@ -29,10 +32,12 @@ class SignUpContainer extends Component {
                         component={renderField}
                         label="Password"
                     />
-                    {errorMsg &&
-                    <strong>
-                        {errorMsg}
-                    </strong>}
+                    <small>
+                        {errorMsg &&
+                        <small>
+                            {errorMsg}
+                        </small>}
+                    </small>
                     <div className="auth-form-buttons">
                         <button type="submit" disabled={submitting}>
                             Log In
@@ -48,7 +53,7 @@ const mapStateToProps = (store) => {
     return {
         status: store.auth.status,
         data: store.auth.data
-    }
+    };
 };
 
 SignUpContainer = reduxForm({

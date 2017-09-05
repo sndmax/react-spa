@@ -13,8 +13,8 @@ export default (
         <MainLayout>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/signup" component={SignUpContainer} />
                 <Route path="/about" component={About} />
+                <Route path="/signup" component={SignUpContainer} />
                 <Route path="/posts" component={PostListContainer} />
             </Switch>
         </MainLayout>
