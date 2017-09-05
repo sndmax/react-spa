@@ -9,27 +9,39 @@ class PostListContainer extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
 
-        dispatch(getPosts('http://localhost:9000/posts.json'));
+        dispatch(getPosts());
     };
 
+    getContent() {
+        const { status, posts } = this.props;
+
+        switch(status) {
+            case 'ERROR':
+                return <p>There was an error loading the items</p>;
+
+            case 'LOADING':
+                return  <PreLoader />;
+
+            case 'DONE':
+                return <Articles posts={posts.posts} />;
+        }
+
+    }
+
     render() {
-        const { hasError, isFetching, posts } = this.props;
 
         return (
-            <div>
-                { hasError && <p>There was an error loading the items</p> }
-                { isFetching && <PreLoader /> }
-                { posts && <Articles posts={posts.posts} /> }
-            </div>
+            <section>
+                { this.getContent() }
+            </section>
         );
     }
 }
 
 const mapStateToProps = (store) => {
     return {
-        posts: store.posts.posts,
-        hasError: store.hasError,
-        isFetching: store.isFetching
+        posts: store.posts.data,
+        status: store.posts.status
     }
 };
 

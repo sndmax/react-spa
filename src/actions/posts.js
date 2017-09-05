@@ -1,5 +1,7 @@
 import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POSTS_FAILURE } from 'actions/actionTypes';
 
+const url = '/data.json';
+
 const getPostsRequest = () => {
     return {
         type: GET_POSTS_REQUEST
@@ -19,7 +21,7 @@ const getPostsFailure = () => {
     }
 };
 
-export const getPosts = (url) => {
+export const getPosts = () => {
     return (dispatch) => {
         dispatch(getPostsRequest());
 

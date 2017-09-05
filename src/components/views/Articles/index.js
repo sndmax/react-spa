@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 import Tags from 'views/Tags';
 import './Articles.scss';
 
@@ -9,15 +10,16 @@ class Articles extends Component {
         const symbolsAmount = 300;
 
         return (
-            <section>
-                {posts.map(({ id, date, title, author, tags, content }) => {
-                    const pub_date = new Date(date * 1000).toDateString();
+            <div>
+                {posts.map((
+                    { id, date, title, author, tags, content }
+                ) => {
                     const shortContent = content.substr(0, symbolsAmount);
 
                     return (
                         <article key={id.toString()} className="article-body">
                             <header>
-                                <div className="article-date">{pub_date}</div>
+                                <div className="article-date"><Moment format="DD MMM YYYY" unix>{date}</Moment></div>
                                 <h1 className="article-title">{title}</h1>
                                 <div className="article-info">
                                     <a href="#">{author}</a>
@@ -32,8 +34,7 @@ class Articles extends Component {
                         </article>
                     )
                 })}
-            </section>
-
+            </div>
         )
     }
 }
