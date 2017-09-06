@@ -22,7 +22,7 @@ export const pages = [
     {
         id: 3,
         title: SIGN_UP_TITLE,
-        link: '/'
+        link: '/signup'
     }
 ];
 
