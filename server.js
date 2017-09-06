@@ -39,4 +39,4 @@ if(isDevelopment) {
     app.get("*", (req, res) => res.sendFile(HTML_FILE));
 }
 
-app.listen(port, () => console.log('App listening on port ' + port));
+app.listen(port, () => console.log(`App listening on port ${port}`));

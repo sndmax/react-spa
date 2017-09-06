@@ -1,4 +1,4 @@
-import { GET_SIGN_REQUEST, GET_SIGN_SUCCESS, GET_SIGN_FAILURE } from 'actions/actionTypes';
+import { GET_SIGN_REQUEST, GET_SIGN_SUCCESS, GET_SIGN_FAILURE } from 'constants/actionTypes';
 import { SubmissionError } from 'redux-form';
 
 const getSignRequest = () => {
@@ -24,7 +24,7 @@ const getSignFailure = (error) => {
 
 
 export const getSign = (values, dispatch) => {
-    const url = './users.json';
+    const url = './data.json';
 
     dispatch(getSignRequest());
     fetch(url)
