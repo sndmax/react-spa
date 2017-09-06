@@ -1,2 +1,3 @@
-npm run dev - start dev version
-npm run prod - start prod version
+start:
+npm run dev - dev version
+npm run prod - prod version
