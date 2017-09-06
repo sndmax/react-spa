@@ -7,6 +7,7 @@ import './LayoutMain.scss';
 const ABOUT_TITLE = 'About';
 const BLOG_TITLE = 'Blog';
 const SIGN_UP_TITLE = 'Sign Up';
+const CONTACT_TITLE = 'Contact';
 
 export const pages = [
     {
@@ -21,6 +22,11 @@ export const pages = [
     },
     {
         id: 3,
+        title: CONTACT_TITLE,
+        link: '/'
+    },
+    {
+        id: 4,
         title: SIGN_UP_TITLE,
         link: '/signup'
     }

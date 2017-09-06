@@ -43,13 +43,17 @@ export const getSign = (values, dispatch) => {
                     _error: 'Login failed, user with such email does not exist'
                 });
             } else users.users.map((user) => {
-                if (user.email === values.username)
-                    if (!(user.password === values.password))
+                if (user.email === values.username) {
+                    if (!(user.password === values.password)) {
                         throw new SubmissionError({
                             _error: 'Login failed, wrong password!'
                         });
+                    } else {
+                        console.log(user);
+                        dispatch(getSignSuccess(user));
+                    }
+                }
             });
-            dispatch(getSignSuccess(values));
         })
         .catch((response) => dispatch(getSignFailure(response)));
 };
