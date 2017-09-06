@@ -8,7 +8,6 @@ import SignUp from 'views/SignUp';
 import PostsContainer from 'containers/PostsContainer';
 import PostContainer from 'containers/PostContainer';
 
-
 export default (
     <BrowserRouter>
         <MainLayout>
