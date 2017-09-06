@@ -22,7 +22,6 @@ export const links = [
     }
 ];
 
-
 class MainLayout extends Component {
     render() {
         const { children } = this.props;
@@ -42,5 +41,6 @@ class MainLayout extends Component {
         );
     }
 }
+
 
 export default MainLayout;

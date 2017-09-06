@@ -30,7 +30,7 @@ const mapStateToProps = (store) => {
         posts: store.posts.posts,
         hasError: store.hasError,
         isFetching: store.isFetching
-    }
+    };
 };
 
 export default connect(mapStateToProps)(PostListContainer);

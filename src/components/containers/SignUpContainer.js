@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { submit } from 'actions/signup';
 import { getSign } from 'actions/signup';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import './SignUpContainer.scss';
 
 const renderField = ({ input, label, type }) =>
@@ -15,7 +15,7 @@ class SignUpContainer extends Component {
         const { status, data, error, handleSubmit, submitting } = this.props;
         const errorMsg = status === 'error' ? data.errors._error : false;
         if (status === 'done') {
-            window.location = '/posts';
+            return <Redirect to="/posts" />;
         }
         return (
             <section>

@@ -62,9 +62,8 @@ input:-webkit-autofill:active {
   }
 }
 
-
-
 .auth-form-buttons button{
+  outline: none;
   margin: 5px 0px 0px 0px;
   align-items: center;
   background-color: gray;

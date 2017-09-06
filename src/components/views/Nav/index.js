@@ -5,7 +5,6 @@ import './Nav.scss';
 class Nav extends Component {
     render() {
         const { links } = this.props;
-
         return (
             <aside className="nav">
                 {links.map(({ href, title }) => {
