@@ -7,6 +7,7 @@ import './LayoutMain.scss';
 const ABOUT_TITLE = 'About';
 const BLOG_TITLE = 'Blog';
 const SIGN_UP_TITLE = 'Sign Up';
+const USERPAGE_TITLE = 'User page';
 
 export const pages = [
     {
@@ -23,6 +24,11 @@ export const pages = [
         id: 3,
         title: SIGN_UP_TITLE,
         link: '/signup'
+    },
+    {
+        id: 4,
+        title: USERPAGE_TITLE,
+        link: '/userpage'
     }
 ];
 
@@ -66,7 +72,7 @@ class LayoutMain extends Component {
                     </div>
                 </footer>
             </div>
-        )
+        );
     }
 }
 

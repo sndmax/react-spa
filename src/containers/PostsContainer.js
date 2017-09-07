@@ -37,6 +37,7 @@ class PostsContainer extends Component {
 }
 
 const mapStateToProps = (store) => {
+    console.log(store);
     return {
         posts: store.posts.items,
         status: store.posts.status

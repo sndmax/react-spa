@@ -48,8 +48,9 @@ export const getSign = (values, dispatch) => {
                         throw new SubmissionError({
                             _error: 'Login failed, wrong password!'
                         });
+                    else
+                        dispatch(getSignSuccess(user));
             });
-            dispatch(getSignSuccess(values));
         })
         .catch((response) => dispatch(getSignFailure(response)));
 };

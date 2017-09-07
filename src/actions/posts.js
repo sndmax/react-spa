@@ -40,7 +40,7 @@ export const getPosts = () => {
 };
 
 export const getPost = (id) => {
-    return(dispatch) => {
+    return (dispatch) => {
         dispatch(getPostsRequest());
 
         fetch(url)
