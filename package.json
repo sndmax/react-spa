@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "express": "^4.15.4",
+    "flexboxgrid": "^6.3.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-flexbox-grid": "^1.1.4",
+    "react-flexbox-grid": "^1.1.5",
     "react-hot-loader": "^3.0.0-beta.7",
     "react-moment": "^0.6.4",
     "react-redux": "^5.0.6",
@@ -16,11 +17,27 @@
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.11",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-devtools-extension": "^2.13.2",
+    "redux-form": "^7.0.4",
+    "redux-thunk": "^2.2.0",
+    "views": "^1.0.2"
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "airbnb"
+  ],
   "scripts": {
     "dev": "webpack --config webpack.dev.config.js && cross-env NODE_ENV=development node server.js",
     "prod": "webpack -p --config webpack.config.js && node server.js"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -32,11 +49,17 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
-    "image-webpack-loader": "^3.3.1",
     "img-loader": "^2.0.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
@@ -46,6 +69,7 @@
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^3.5.4",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1",

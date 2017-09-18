@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-config = {
+const config = {
     entry: {
         app: './src/index.js'
     },
@@ -11,7 +12,11 @@ config = {
         new HtmlWebpackPlugin({
             template: 'public/index.html'
         }),
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
+        new CopyWebpackPlugin([
+            { from: 'src/resources/data.json' },
+            { from: 'src/resources/img/logo.jpg', to: 'img/' }
+        ])
     ],
     output: {
         filename: '[name].bundle.js',
@@ -20,13 +25,11 @@ config = {
     resolve: {
         alias: {
             actions: path.resolve(__dirname, 'src/actions'),
-            api: path.resolve(__dirname, 'src/api'),
-            containers: path.resolve(__dirname, 'src/components/containers'),
-            layouts: path.resolve(__dirname, 'src/components/layouts'),
-            views: path.resolve(__dirname, 'src/components/views'),
+            constants: path.resolve(__dirname, 'src/constants'),
+            containers: path.resolve(__dirname, 'src/containers'),
+            views: path.resolve(__dirname, 'src/views'),
             reducers: path.resolve(__dirname, 'src/reducers'),
-            variables: path.resolve(__dirname, 'src/utility/_variables.scss'),
-            mixins: path.resolve(__dirname, 'src/utility/_mixins.scss')
+            styles: path.resolve(__dirname, 'src/resources/styles')
         },
         extensions: ['.js', '.jsx']
     },
@@ -38,12 +41,30 @@ config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react', 'es2015', "stage-1"],
+                        presets: ['react', 'es2015', 'stage-0', 'stage-1'],
                         plugins: [
                             'react-hot-loader/babel'
                         ]
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: (loader) => [
+                                require('autoprefixer')()
+                            ]
+                        }
+                    }]
+                })
             },
             {
                 test: /\.scss$/,

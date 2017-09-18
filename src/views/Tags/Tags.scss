@@ -1,0 +1,17 @@
+@import '~styles/core.scss';
+
+.article--tags a {
+  padding: 2px 5px;
+  margin: 0 5px;
+
+  background: #eceff1;
+  color: $wh;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-font-color;
+    background: $wh;
+  }
+}

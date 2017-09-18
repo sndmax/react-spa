@@ -1,12 +1,16 @@
-@import '~variables';
-@import '~mixins';
+@import '~styles/core.scss';
+
+html {
+  height: 100%;
+}
 
 body {
-  @include marg(0);
-  @include pad(0);
-  background-size: 100vw;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  position: relative;
 
-  background: url(./bg.jpg) no-repeat center center fixed;
+  background: #eceff1;
   color: $base-font-color;
 
   font-family: $base-font-family;
@@ -17,19 +21,7 @@ body {
 }
 
 h1, h2, h3 {
-  @include marg(1em 0 .5em);
+  margin: 1em 0 .5em;
 
   text-rendering: optimizeLegibility;
-}
-
-#page {
-  background: $content-bg-color;
-
-  >section {
-    @include marg(auto);
-    @include pad(32px);
-
-    box-sizing: border-box;
-    max-width: 1020px;
-  }
 }
