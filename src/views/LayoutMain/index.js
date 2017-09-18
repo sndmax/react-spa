@@ -43,7 +43,7 @@ class LayoutMain extends Component {
                         <div className="row end-xs middle-xs">
                             <div className="col-xs-2">
                                 <Link to="/">
-                                    <img height="110" src="/img/logo.jpg" />
+                                    <img alt="Logo" height="110" src="/img/logo.jpg" />
                                 </Link>
                             </div>
                             <div className="col-xs-10">
@@ -72,7 +72,7 @@ class LayoutMain extends Component {
                     </div>
                 </footer>
             </div>
-        )
+        );
     }
 }
 

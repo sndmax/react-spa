@@ -49,7 +49,6 @@ export const getSign = (values, dispatch) => {
                             _error: 'Login failed, wrong password!'
                         });
                     } else {
-                        console.log(user);
                         dispatch(getSignSuccess(user));
                     }
                 }

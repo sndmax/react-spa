@@ -13,15 +13,15 @@ class Article extends Component {
             <article key={id.toString()}>
                 <header>
                     <h1 className="article-title"><Link to={"/post/" + id}>{title}</Link></h1>
-                    <img src={img} className="article-image"/>
+                    <img alt={title} src={img} className="article-image"/>
                 </header>
                 <div className="article-content">
                     <p>{data}</p>
                 </div>
                 <footer>
                     <div className="article-info">
-                        <a href=""><Moment format="DD MMM YYYY" unix>{date}</Moment></a>
-                        <a href=""> by {author}</a>
+                        <a href><Moment format="DD MMM YYYY" unix>{date}</Moment></a>
+                        <a href> by {author}</a>
                         <span className="article-dot" />
                         <Tags tags={tags} />
                     </div>
