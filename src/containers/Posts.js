@@ -4,7 +4,7 @@ import Articles from 'views/Articles';
 import PreLoader from 'views/PreLoader';
 import { getPosts } from 'actions/posts';
 
-class PostsContainer extends Component {
+class Posts extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
 
@@ -14,7 +14,7 @@ class PostsContainer extends Component {
     getContent() {
         const { status, posts } = this.props;
 
-        switch(status) {
+        switch (status) {
             case 'ERROR':
                 return <p>There was an error loading the items</p>;
 
@@ -23,6 +23,9 @@ class PostsContainer extends Component {
 
             case 'DONE':
                 return <Articles posts={posts} />;
+
+            default:
+                return <PreLoader />;
         }
     }
 
@@ -42,4 +45,4 @@ const mapStateToProps = (store) => {
     };
 };
 
-export default connect(mapStateToProps)(PostsContainer);
+export default connect(mapStateToProps)(Posts);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SearchBar from 'views/SearchBar';
-import './Sidebar.scss';
 
 class Sidebar extends Component {
     render() {

@@ -1,24 +1,29 @@
-import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POST_SUCCESS, GET_POSTS_FAILURE } from 'constants/actionTypes';
+import {
+    GET_POSTS_REQUEST,
+    GET_POSTS_SUCCESS,
+    GET_POST_SUCCESS,
+    GET_POSTS_FAILURE,
+} from 'constants/actionTypes';
 
 const url = '/data.json';
 
 const getPostsRequest = () => {
     return {
         type: GET_POSTS_REQUEST
-    }
+    };
 };
 
 const getPostsSuccess = (posts, isSingle = false) => {
     return {
         type: isSingle ? GET_POST_SUCCESS : GET_POSTS_SUCCESS,
         payload: posts
-    }
+    };
 };
 
 const getPostsFailure = () => {
     return {
         type: GET_POSTS_FAILURE
-    }
+    };
 };
 
 export const getPosts = () => {
@@ -40,7 +45,7 @@ export const getPosts = () => {
 };
 
 export const getPost = (id) => {
-    return(dispatch) => {
+    return (dispatch) => {
         dispatch(getPostsRequest());
 
         fetch(url)
@@ -54,9 +59,10 @@ export const getPost = (id) => {
             .then((response) => response.json())
             .then((response) => {
                 response.posts.map((post) => {
-                    if(id == post.id)
-                        dispatch(getPostsSuccess(post, true))
-                })
+                    if (id == post.id) {
+                        dispatch(getPostsSuccess(post, true));
+                    }
+                });
             })
             .catch((response) => dispatch(getPostsFailure(response)));
     }

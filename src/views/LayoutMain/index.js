@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from 'views/Nav';
-import Sidebar from 'views/Sidebar';
+import Sidebar from 'containers/Sidebar';
 import './LayoutMain.scss';
 
 const ABOUT_TITLE = 'About';
