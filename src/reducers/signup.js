@@ -1,4 +1,8 @@
-import { GET_SIGN_REQUEST, GET_SIGN_SUCCESS, GET_SIGN_FAILURE } from '../constants/actionTypes';
+import {
+    GET_SIGN_REQUEST,
+    GET_SIGN_SUCCESS,
+    GET_SIGN_FAILURE
+} from '../constants/actionTypes';
 
 export const auth = (state = [], action) => {
     const { type, payload } = action;

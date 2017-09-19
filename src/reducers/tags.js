@@ -1,8 +1,7 @@
 import {
-    GET_POSTS_REQUEST,
-    GET_POSTS_SUCCESS,
-    GET_POST_SUCCESS,
-    GET_POSTS_FAILURE
+    GET_TAGS_REQUEST,
+    GET_TAGS_SUCCESS,
+    GET_TAGS_FAILURE
 } from 'constants/actionTypes';
 
 import {
@@ -12,33 +11,26 @@ import {
     STATUS_DONE_SINGLE
 } from 'constants/actionStatuses';
 
-export const posts = (state = [], action) => {
+export const tags = (state = [], action) => {
     const { type, payload } = action;
 
     switch (type) {
-        case GET_POSTS_FAILURE:
+        case GET_TAGS_FAILURE:
             return {
                 ...state,
                 status: STATUS_ERROR
             };
 
-        case GET_POSTS_REQUEST:
+        case GET_TAGS_REQUEST:
             return {
                 ...state,
                 status: STATUS_LOADING
             };
 
-        case GET_POSTS_SUCCESS:
+        case GET_TAGS_SUCCESS:
             return {
                 ...state,
                 status: STATUS_DONE,
-                items: payload
-            };
-
-        case GET_POST_SUCCESS:
-            return {
-                ...state,
-                status: STATUS_DONE_SINGLE,
                 items: payload
             };
 
