@@ -6,8 +6,8 @@ import Home from 'views/Home';
 import About from 'views/About';
 import SignUp from 'views/SignUp';
 import Userpage from 'views/Userpage';
-import PostsContainer from 'containers/Posts';
-import PostContainer from 'containers/Post';
+import Posts from 'containers/Posts';
+import Post from 'containers/Post';
 
 export default (
     <BrowserRouter>
@@ -15,8 +15,8 @@ export default (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/posts" component={PostsContainer} />
-                <Route path="/post/:id" component={PostContainer} />
+                <Route path="/posts" component={Posts} />
+                <Route path="/post/:id" component={Post} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/userpage/" component={Userpage} />
             </Switch>

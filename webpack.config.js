@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-config = {
+const config = {
     entry: {
         app: './src/index.js'
     },
@@ -41,7 +41,7 @@ config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['react', 'es2015', "stage-1"],
+                        presets: ['react', 'es2015', 'stage-0', 'stage-1'],
                         plugins: [
                             'react-hot-loader/babel'
                         ]

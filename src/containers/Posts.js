@@ -4,10 +4,10 @@ import Articles from 'views/Articles';
 import PreLoader from 'views/PreLoader';
 import { getPosts } from 'actions/posts';
 
-class PostsContainer extends Component {
-
+class Posts extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
+
         dispatch(getPosts());
     }
 
@@ -45,4 +45,4 @@ const mapStateToProps = (store) => {
     };
 };
 
-export default connect(mapStateToProps)(PostsContainer);
+export default connect(mapStateToProps)(Posts);

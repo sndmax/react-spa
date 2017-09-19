@@ -14,16 +14,16 @@ class Articles extends Component {
                 {posts.map((
                     { id, img, date, title, author, tags, content }
                 ) => {
-                    const data = content.substr(0, symbolsAmount) + '...';
+                    const contentShort = `${content.substr(0, symbolsAmount)}...`;
 
                     return (
                         <article key={id.toString()}>
                             <header>
-                                <h1 className="article-title"><Link to={"/post/" + id}>{title}</Link></h1>
-                                <img src={img} className="article-image"/>
+                                <h1 className="article-title"><Link to={`/post/${id}`}>{title}</Link></h1>
+                                <img alt={title} src={img} className="article-image" />
                             </header>
                             <div className="article-content">
-                                <p>{data}</p>
+                                <p>{contentShort}</p>
                             </div>
                             <footer>
                                 <div className="article-info">

@@ -8,6 +8,7 @@ const ABOUT_TITLE = 'About';
 const BLOG_TITLE = 'Blog';
 const SIGN_UP_TITLE = 'Sign Up';
 const USERPAGE_TITLE = 'User page';
+const CONTACT_TITLE = 'Contact';
 
 export const pages = [
     {
@@ -22,6 +23,11 @@ export const pages = [
     },
     {
         id: 3,
+        title: CONTACT_TITLE,
+        link: '/'
+    },
+    {
+        id: 4,
         title: SIGN_UP_TITLE,
         link: '/signup'
     },
@@ -43,7 +49,7 @@ class LayoutMain extends Component {
                         <div className="row end-xs middle-xs">
                             <div className="col-xs-2">
                                 <Link to="/">
-                                    <img height="110" src="/img/logo.jpg" />
+                                    <img alt="Logo" height="110" src="/img/logo.jpg" />
                                 </Link>
                             </div>
                             <div className="col-xs-10">

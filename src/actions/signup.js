@@ -1,7 +1,7 @@
 import {
     GET_SIGN_REQUEST,
     GET_SIGN_SUCCESS,
-    GET_SIGN_FAILURE
+    GET_SIGN_FAILURE,
 } from 'constants/actionTypes';
 import { SubmissionError } from 'redux-form';
 
@@ -47,13 +47,15 @@ export const getSign = (values, dispatch) => {
                     _error: 'Login failed, user with such email does not exist'
                 });
             } else users.users.map((user) => {
-                if (user.email === values.username)
-                    if (!(user.password === values.password))
+                if (user.email === values.username) {
+                    if (!(user.password === values.password)) {
                         throw new SubmissionError({
                             _error: 'Login failed, wrong password!'
                         });
-                    else
+                    } else {
                         dispatch(getSignSuccess(user));
+                    }
+                }
             });
         })
         .catch((response) => dispatch(getSignFailure(response)));

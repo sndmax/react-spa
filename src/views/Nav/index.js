@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './Nav.scss';
 
 class Nav extends Component {
     render() {
-        const {links} = this.props;
+        const { links, user } = this.props;
+
+        if(user) {
+            links[3].title = user.email;
+        }
 
         return (
             <aside className="nav">
@@ -16,4 +21,10 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+const mapStateToProps = (store) => {
+    return {
+        user: store.auth.data
+    }
+};
+
+export default connect(mapStateToProps)(Nav);

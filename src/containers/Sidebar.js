@@ -46,4 +46,3 @@ const mapStateToProps = (store) => {
 };
 
 export default connect(mapStateToProps)(Sidebar);
-
