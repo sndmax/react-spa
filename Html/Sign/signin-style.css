@@ -63,7 +63,9 @@ header .header-items {
 	background-color: #ffffff;
 }
 .header-items .menu button:hover {
-	background-color: rgb(211,211,211, 0.7);
+	background-color: #696969;
+	color: #ffffff;
+	border: 2px solid #696969;
 }
 body main {
 	width: 960px;
@@ -79,6 +81,10 @@ main .blog-items {
 	background-color: #DCDCDC;
 	margin: 0px;
 	line-height: 50px;
+}
+.blog-items .item-1 h1 a {
+	text-decoration: none;
+	color: #808080;
 }
 .blog-items .item-1 p {
 	margin: 0px;
@@ -106,7 +112,7 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-1 .item1-list li {
-
+	
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -124,6 +130,10 @@ main .blog-items {
 	background-color: #DCDCDC;
 	margin: 0px;
 	line-height: 50px;
+}
+.blog-items .item-2 h1 a {
+	text-decoration: none;
+	color: #808080;
 }
 .blog-items .item-2 p {
 	margin: 0px;
@@ -151,7 +161,7 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-2 .item2-list li {
-
+	
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -169,6 +179,10 @@ main .blog-items {
 	background-color: #DCDCDC;
 	margin: 0px;
 	line-height: 50px;
+}
+.blog-items .item-3 h1 a {
+	text-decoration: none;
+	color: #808080;
 }
 .blog-items .item-3 p {
 	margin: 0px;
@@ -196,7 +210,7 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-3 .item3-list li {
-
+	
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -266,5 +280,7 @@ main .blog-items .more-items button {
 	background-color: #ffffff;
 }
 main .blog-items .more-items button:hover {
-	background-color: rgb(211,211,211, 0.7);
+	background-color: #696969;
+	color: #ffffff;
+	border: 2px solid #696969;
 }
