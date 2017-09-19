@@ -97,21 +97,28 @@
       "email": "Gurmeet@ma.il",
       "password": "Gurmeet",
       "first_name": "Kallistos",
-      "last_name": "Gurmeet"
+      "last_name": "Gurmeet",
+      "profile_img": "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias asperiores aut culpa debitis doloribus dolorum enim esse eum harum illo iste iure magni minima molestiae molestias nesciunt officia possimus, quasi, quidem quis quos soluta tempora ullam ut vel veritatis voluptatibus."
     },
     {
       "id": 2,
       "email": "Magomet@ma.il",
       "password": "Magomet",
       "first_name": "Simon",
-      "last_name": "Magomet"
+      "last_name": "Magomet",
+      "profile_img": "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias asperiores aut culpa debitis doloribus dolorum enim esse eum harum illo iste iure magni minima molestiae molestias nesciunt officia possimus, quasi, quidem quis quos soluta tempora ullam ut vel veritatis voluptatibus."
+
     },
     {
       "id": 3,
       "email": "Henryk@ma.il",
       "password": "Henryk",
       "first_name": "Enric",
-      "last_name": "Henryk"
+      "last_name": "Henryk",
+      "profile_img": "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias asperiores aut culpa debitis doloribus dolorum enim esse eum harum illo iste iure magni minima molestiae molestias nesciunt officia possimus, quasi, quidem quis quos soluta tempora ullam ut vel veritatis voluptatibus."
     }
   ]
 }

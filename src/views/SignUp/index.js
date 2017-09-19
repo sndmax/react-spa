@@ -36,9 +36,10 @@ class SignUp extends Component {
                         />
                         <small>
                             {errorMsg &&
-                            <small>
-                                {errorMsg}
-                            </small>}
+                                <small>
+                                    {errorMsg}
+                                </small>
+                            }
                         </small>
                         <div className="auth-form-buttons">
                             <button type="submit" disabled={submitting}>

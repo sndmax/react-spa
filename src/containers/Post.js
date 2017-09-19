@@ -10,7 +10,7 @@ class Post extends Component {
         const { id } = this.props.match.params;
 
         dispatch(getPost(id));
-    }
+    };
 
     getContent() {
         const { status, post } = this.props;
@@ -18,13 +18,10 @@ class Post extends Component {
         switch (status) {
             case 'ERROR':
                 return <p>There was an error loading the items</p>;
-
             case 'LOADING':
                 return <PreLoader />;
-
             case 'DONE_SINGLE':
                 return <Article post={post} />;
-
             default:
                 return <PreLoader />;
         }
