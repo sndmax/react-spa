@@ -1,17 +1,22 @@
 @import '~styles/core.scss';
 
-.article--tags a {
-  padding: 2px 5px;
-  margin: 0 5px;
+.tags-wrapper {
+  background: #fff;
+}
 
-  background: #eceff1;
-  color: $wh;
+.tags a {
+    padding: 2px 5px;
+    margin: 0 5px;
 
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+    background: #eceff1;
+    color: $wh;
 
-  &:hover {
-    color: $primary-font-color;
-    background: $wh;
-  }
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-font-color;
+      background: $wh;
+    }
 }

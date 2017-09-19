@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Userpage.scss';
 
-
 class Userpage extends Component {
 
     render() {
@@ -10,9 +9,9 @@ class Userpage extends Component {
 
         return (
             <div className="userpage">
-                <h2 className="userpage-header">Bloger's info:</h2>
+                <h2 className="userpage-header">Bloger`s info:</h2>
                 <div className="row ">
-                    <img className="userpage-image" src={user.profile_img} />
+                    <img alt={user.first_name} className="userpage-image" src={user.profile_img} />
                     <ul className="col-xs-8">
                         <li>
                             <p>First Name:</p>
