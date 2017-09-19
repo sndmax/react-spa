@@ -1,4 +1,8 @@
-import { GET_SIGN_REQUEST, GET_SIGN_SUCCESS, GET_SIGN_FAILURE } from 'constants/actionTypes';
+import {
+    GET_SIGN_REQUEST,
+    GET_SIGN_SUCCESS,
+    GET_SIGN_FAILURE
+} from 'constants/actionTypes';
 import { SubmissionError } from 'redux-form';
 
 const getSignRequest = () => {

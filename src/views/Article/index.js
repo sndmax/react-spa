@@ -6,8 +6,6 @@ import Tags from 'views/Tags';
 class Article extends Component {
     render() {
         const { id, img, date, title, author, tags, content } = this.props.post;
-        const symbolsAmount = 300;
-        const data = content.substr(0, symbolsAmount) + '...';
 
         return (
             <article key={id.toString()}>
@@ -16,7 +14,7 @@ class Article extends Component {
                     <img src={img} className="article-image"/>
                 </header>
                 <div className="article-content">
-                    <p>{data}</p>
+                    <p>{content}</p>
                 </div>
                 <footer>
                     <div className="article-info">
@@ -27,7 +25,7 @@ class Article extends Component {
                     </div>
                 </footer>
             </article>
-        )
+        );
     }
 }
 

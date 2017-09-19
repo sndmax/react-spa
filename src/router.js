@@ -6,8 +6,8 @@ import Home from 'views/Home';
 import About from 'views/About';
 import SignUp from 'views/SignUp';
 import Userpage from 'views/Userpage';
-import PostsContainer from 'containers/PostsContainer';
-import PostContainer from 'containers/PostContainer';
+import PostsContainer from 'containers/Posts';
+import PostContainer from 'containers/Post';
 
 export default (
     <BrowserRouter>

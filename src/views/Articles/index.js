@@ -34,10 +34,10 @@ class Articles extends Component {
                                 </div>
                             </footer>
                         </article>
-                    )
+                    );
                 })}
             </div>
-        )
+        );
     }
 }
 

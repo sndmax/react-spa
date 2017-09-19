@@ -1,4 +1,9 @@
-import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_POST_SUCCESS, GET_POSTS_FAILURE } from 'constants/actionTypes';
+import {
+    GET_POSTS_REQUEST,
+    GET_POSTS_SUCCESS,
+    GET_POST_SUCCESS,
+    GET_POSTS_FAILURE
+} from 'constants/actionTypes';
 
 const url = '/data.json';
 
@@ -55,8 +60,8 @@ export const getPost = (id) => {
             .then((response) => {
                 response.posts.map((post) => {
                     if(id == post.id)
-                        dispatch(getPostsSuccess(post, true))
-                })
+                        dispatch(getPostsSuccess(post, true));
+                });
             })
             .catch((response) => dispatch(getPostsFailure(response)));
     }

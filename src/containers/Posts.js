@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Article from 'views/Article';
+import Articles from 'views/Articles';
 import PreLoader from 'views/PreLoader';
-import { getPost } from 'actions/posts';
+import { getPosts } from 'actions/posts';
 
-class PostContainer extends Component {
+class PostsContainer extends Component {
 
     componentDidMount() {
         const { dispatch } = this.props;
-        const { id } = this.props.match.params;
-
-        dispatch(getPost(id));
-    };
+        dispatch(getPosts());
+    }
 
     getContent() {
-        const { status, post } = this.props;
+        const { status, posts } = this.props;
 
-        switch(status) {
+        switch (status) {
             case 'ERROR':
                 return <p>There was an error loading the items</p>;
 
             case 'LOADING':
-                return  <PreLoader />;
+                return <PreLoader />;
 
-            case 'DONE_SINGLE':
-                return <Article post={post} />;
+            case 'DONE':
+                return <Articles posts={posts} />;
+
+            default:
+                return <PreLoader />;
         }
     }
 
     render() {
         return (
-            <section className="article">
+            <section className="articles">
                 { this.getContent() }
             </section>
         );
@@ -39,9 +40,9 @@ class PostContainer extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        post: store.posts.items,
+        posts: store.posts.items,
         status: store.posts.status
-    }
+    };
 };
 
-export default connect(mapStateToProps)(PostContainer);
+export default connect(mapStateToProps)(PostsContainer);
