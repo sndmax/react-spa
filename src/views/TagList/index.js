@@ -3,7 +3,7 @@ import './TagsList.scss';
 
 class TagList extends Component {
     render() {
-        const tags = this.props.tags.map(tag => {
+        const tags = this.props.tags.map((tag) => {
             return (<a key={tag.toString()} href="#">
                 { tag }
             </a>);
