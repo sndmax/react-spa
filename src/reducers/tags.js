@@ -1,15 +1,11 @@
 import {
-    GET_TAGS_REQUEST,
-    GET_TAGS_SUCCESS,
-    GET_TAGS_FAILURE
-} from 'constants/actionTypes';
-
-import {
     STATUS_ERROR,
     STATUS_LOADING,
     STATUS_DONE,
-    STATUS_DONE_SINGLE
-} from 'constants/actionStatuses';
+    GET_TAGS_REQUEST,
+    GET_TAGS_SUCCESS,
+    GET_TAGS_FAILURE,
+} from '../actions/actionConstants';
 
 export const tags = (state = [], action) => {
     const { type, payload } = action;

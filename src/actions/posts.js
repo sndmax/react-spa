@@ -3,7 +3,7 @@ import {
     GET_POSTS_SUCCESS,
     GET_POST_SUCCESS,
     GET_POSTS_FAILURE,
-} from 'constants/actionTypes';
+} from './actionConstants';
 
 const url = '/data.json';
 

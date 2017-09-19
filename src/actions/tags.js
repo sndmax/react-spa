@@ -2,7 +2,7 @@ import {
     GET_TAGS_REQUEST,
     GET_TAGS_SUCCESS,
     GET_TAGS_FAILURE
-} from 'constants/actionTypes';
+} from './actionConstants';
 
 const url = '/data.json';
 
@@ -49,7 +49,7 @@ export const getTags = () => {
                     });
 
                 });
-                console.log(tags);
+
                 return dispatch(getTagsSuccess((tags)));
             })
             .catch((response) => dispatch(getTagsFailure(response)));

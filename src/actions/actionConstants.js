@@ -1,3 +1,9 @@
+export const STATUS_UNSENT = 'UNSENT';
+export const STATUS_ERROR = 'ERROR';
+export const STATUS_LOADING = 'LOADING';
+export const STATUS_DONE = 'DONE';
+export const STATUS_DONE_SINGLE = 'DONE_SINGLE';
+
 export const GET_POSTS_REQUEST = 'GET_POSTS_REQUEST';
 export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
 export const GET_POST_SUCCESS = 'GET_POST_SUCCESS';
@@ -10,6 +16,3 @@ export const GET_SIGN_FAILURE = 'GET_SIGN_FAILURE';
 export const GET_TAGS_REQUEST = 'GET_TAGS_REQUEST';
 export const GET_TAGS_SUCCESS = 'GET_TAGS_SUCCESS';
 export const GET_TAGS_FAILURE = 'GET_TAGS_FAILURE';
-
-
-

@@ -4,40 +4,6 @@ import Nav from 'views/Nav';
 import Sidebar from 'containers/Sidebar';
 import './LayoutMain.scss';
 
-const ABOUT_TITLE = 'About';
-const BLOG_TITLE = 'Blog';
-const SIGN_UP_TITLE = 'Sign Up';
-const USERPAGE_TITLE = 'User page';
-const CONTACT_TITLE = 'Contact';
-
-export const pages = [
-    {
-        id: 1,
-        title: ABOUT_TITLE,
-        link: '/about'
-    },
-    {
-        id: 2,
-        title: BLOG_TITLE,
-        link: '/posts'
-    },
-    {
-        id: 3,
-        title: CONTACT_TITLE,
-        link: '/'
-    },
-    {
-        id: 4,
-        title: SIGN_UP_TITLE,
-        link: '/signup'
-    },
-    {
-        id: 4,
-        title: USERPAGE_TITLE,
-        link: '/userpage'
-    }
-];
-
 class LayoutMain extends Component {
     render() {
         const { children } = this.props;
@@ -53,7 +19,7 @@ class LayoutMain extends Component {
                                 </Link>
                             </div>
                             <div className="col-xs-10">
-                                <Nav links={ pages } />
+                                <Nav />
                             </div>
                         </div>
                     </div>
@@ -63,7 +29,7 @@ class LayoutMain extends Component {
                         <div className="col-xs-8 app__posts">
                             { children }
                         </div>
-                        <div className="col-xs-4">
+                        <div className="col-xs-offset-1 col-xs-3">
                             <Sidebar />
                         </div>
                     </div>
