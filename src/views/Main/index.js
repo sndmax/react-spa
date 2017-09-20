@@ -14,10 +14,10 @@ class Main extends Component {
                        <hr/>
                        <ul className="item1-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><mark>black</mark></li>
-                           <li><mark>new</mark></li>
-                           <li><mark>house</mark></li>
-                           <li><mark>iste id</mark></li>
+                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>new</mark></a></li>
+                           <li><a href=""><mark>house</mark></a></li>
+                           <li><a href=""><mark>iste id</mark></a></li>
                        </ul>
                    </div>
                    <div className="item-2">
@@ -27,10 +27,10 @@ class Main extends Component {
                        <hr/>
                        <ul className="item2-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><mark>black</mark></li>
-                           <li><mark>new</mark></li>
-                           <li><mark>house</mark></li>
-                           <li><mark>iste id</mark></li>
+                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>new</mark></a></li>
+                           <li><a href=""><mark>house</mark></a></li>
+                           <li><a href=""><mark>iste id</mark></a></li>
                        </ul>
                    </div>
                    <div className="item-3">
@@ -40,10 +40,10 @@ class Main extends Component {
                        <hr/>
                        <ul className="item3-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><mark>black</mark></li>
-                           <li><mark>new</mark></li>
-                           <li><mark>house</mark></li>
-                           <li><mark>iste id</mark></li>
+                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>new</mark></a></li>
+                           <li><a href=""><mark>house</mark></a></li>
+                           <li><a href=""><mark>iste id</mark></a></li>
                        </ul>
                    </div>
                    <div className="more-items"><button>More</button></div>
@@ -52,7 +52,7 @@ class Main extends Component {
                    <form action="">
                        <input type="text" name="search" value="  Search..."/>
                    </form>
-                   <div>
+                   <div className="posts-list">
                        <h2>Popular posts</h2>
                        <ul>
                            <li><a href="">Post1</a></li>
@@ -61,13 +61,15 @@ class Main extends Component {
                            <li><a href="">...</a></li>
                        </ul>
                    </div>
-                   <div>
+                   <div className="tags-list">
                        <h2>Tags</h2>
                        <ul>
-                           <li><a href="">Tag1</a></li>
-                           <li><a href="">Tag2</a></li>
-                           <li><a href="">Tag3</a></li>
-                           <li><a href="">...</a></li>
+                           <li><a href="">Tag 11</a></li>
+                           <li><a href="">Tag 22</a></li>
+                           <li><a href="">Tag 33</a></li>
+                           <li><a href="">Tag 11</a></li>
+                           <li><a href="">Tag 22</a></li>
+                           <li><a href="">Tag 33</a></li>
                        </ul>
                    </div>
                </div>

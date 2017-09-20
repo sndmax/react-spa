@@ -14,8 +14,8 @@ class Header extends Component {
                    </div>
                    <div className="menu">
                        <ul className="menu-list">
-                           <li>About</li>
-                           <li>Blog</li>
+                           <li><a href="">About</a></li>
+                           <li><a href="">Blog</a></li>
                        </ul>
                        <button>Sign in</button>
                    </div>

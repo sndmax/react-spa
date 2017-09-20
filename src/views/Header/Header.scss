@@ -38,8 +38,14 @@ header .header-items {
 .header-items .menu .menu-list li {
 	display: inline-block;
 	text-transform: uppercase;
-	padding-right: 50px;
-	cursor: pointer;
+	margin-right: 50px;
+}
+.header-items .menu .menu-list li a {
+	text-decoration: none;
+	color: #808080;
+}
+.header-items .menu .menu-list li:hover {
+	border-bottom: 2px solid #808080;
 }
 .header-items .menu button {
 	float: right;

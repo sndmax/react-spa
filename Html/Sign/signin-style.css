@@ -1,6 +1,6 @@
 html, body {
 	font-family: Open Sans, sans-serif;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	color: #808080;
 }
@@ -12,6 +12,7 @@ header .header-items {
 	height: 150px;
 	margin: 0 auto;
 }
+
 .header-items:after {
 	content: "";
 	display: table;
@@ -77,7 +78,7 @@ main .blog-items {
 }
 .blog-items .item-1 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -111,9 +112,11 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-1 .item1-list li {
-	
 	display: inline-block;
 	margin-right: 15px;
+}
+.blog-items .item-1 .item1-list li a {
+	text-decoration: none;
 }
 .blog-items .item-1 .item1-list .second-item {
 	border-left: 2px solid #D3D3D3;
@@ -124,9 +127,13 @@ main .blog-items {
 .blog-items .item-1 .item1-list mark {
 	background-color: #D3D3D3;
 }
+.blog-items .item-1 .item1-list li a mark:hover {
+	background-color: #ffffff;
+	color: #808080;
+}
 .blog-items .item-2 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -160,9 +167,11 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-2 .item2-list li {
-	
 	display: inline-block;
 	margin-right: 15px;
+}
+.blog-items .item-2 .item2-list li a {
+	text-decoration: none;
 }
 .blog-items .item-2 .item2-list .second-item {
 	border-left: 2px solid #D3D3D3;
@@ -173,9 +182,13 @@ main .blog-items {
 .blog-items .item-2 .item2-list mark {
 	background-color: #D3D3D3;
 }
+.blog-items .item-2 .item2-list li a mark:hover {
+	background-color: #ffffff;
+	color: #808080;
+}
 .blog-items .item-3 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -209,9 +222,11 @@ main .blog-items {
 	box-sizing: border-box;
 }
 .blog-items .item-3 .item3-list li {
-	
 	display: inline-block;
 	margin-right: 15px;
+}
+.blog-items .item-3 .item3-list li a {
+	text-decoration: none;
 }
 .blog-items .item-3 .item3-list .second-item {
 	border-left: 2px solid #D3D3D3;
@@ -221,6 +236,10 @@ main .blog-items {
 }
 .blog-items .item-3 .item3-list mark {
 	background-color: #D3D3D3;
+}
+.blog-items .item-3 .item3-list li a mark:hover {
+	background-color: #ffffff;
+	color: #808080;
 }
 body main .blog-items div h1 {
 	padding-top: 50px;
@@ -243,23 +262,48 @@ main .sidebar form input {
 main .sidebar ul {
 	list-style: none;
 }
+main .sidebar .tags-list ul {
+	position: relative;
+	left: -17px;
+	height: 75px;
+}
 main .sidebar div {
 	padding-top: 25px;
+}
+main .sidebar .tags-list ul li {
+	display: inline-block;
+	padding: 5px;
+	cursor: pointer;
+}
+main .sidebar .tags-list ul li a {
+	font-size: 16px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	display: block;
+	background-color: #D3D3D3;
+	color: #171717;
+}
+main .sidebar .tags-list ul li a:hover {
+	background-color: #ffffff;
+	color: #808080;
 }
 body footer {
 	clear: both;
 	height: 50px;
 	background-color: #ffffff;
 	border: 1px solid #ffffff;
+	font-family: Open Sans, sans-serif;
+	color: #808080;
+    font-size: 12px;
 }
-body footer div {
+body footer div p{
 	width: 100%;
+	height: 100%;
 	text-align: center;
-	font-size: 12px;
-	margin-top: 20px;
+	vertical-align: middle;
 }
 main .blog-items .more-items {
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	padding-top: 20px;
 	padding-bottom: 40px;
 	text-align: center;
