@@ -1,74 +1,12 @@
 html, body {
-	font-family: Open Sans, sans-serif;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
-	color: #808080;
-}
-body header {
-	background-color: #ffffff;
-}
-header .header-items {
-	width: 960px;
-	height: 150px;
-	margin: 0 auto;
-}
-.header-items:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.header-items .logo {
-	width: 30%;
-	float: left;
-}
-.header-items .menu {
-	width: 70%;
-	float: right;
-	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: 5px;
-	padding-top: 50px;
-}
-.header-items .menu:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.header-items .menu .menu-list {
-	list-style: none;
-	float: left;
-	padding-left: 255px;
-}
-.header-items .menu .menu-list li {
-	display: inline-block;
-	text-transform: uppercase;
-	padding-right: 50px;
-	cursor: pointer;
-}
-.header-items .menu button {
-	float: right;
-	height: 30px;
-	width: 165px;
-	border-radius: 15px;
-	border: 2px solid #808080;
-	margin-top: 7px;
-	font-family: Open Sans, sans-serif;
-	color: #808080;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	cursor: pointer;
-	background-color: #ffffff;
-}
-.header-items .menu button:hover {
-	background-color: #696969;
-	color: #ffffff;
-	border: 2px solid #696969;
 }
 body main {
 	width: 960px;
 	margin: 0 auto;
+	font-family: Open Sans, sans-serif;
+	color: #808080;
 }
 main .blog-items {
 	background-color: #ffffff;
@@ -77,7 +15,7 @@ main .blog-items {
 }
 .blog-items .item-1 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -126,7 +64,7 @@ main .blog-items {
 }
 .blog-items .item-2 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -175,7 +113,7 @@ main .blog-items {
 }
 .blog-items .item-3 h1 {
 	text-align: center;
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
@@ -246,20 +184,8 @@ main .sidebar ul {
 main .sidebar div {
 	padding-top: 25px;
 }
-body footer {
-	clear: both;
-	height: 50px;
-	background-color: #ffffff;
-	border: 1px solid #ffffff;
-}
-body footer div {
-	width: 100%;
-	text-align: center;
-	font-size: 12px;
-	margin-top: 20px;
-}
 main .blog-items .more-items {
-	background-color: #DCDCDC;
+	background-color: #f7f7f7;
 	padding-top: 20px;
 	padding-bottom: 40px;
 	text-align: center;
