@@ -6,13 +6,13 @@ class Header extends Component {
     render() {
         return (
            <header>
-               <div className="header-items">
+               <div className="header-items clearfix">
                    <div className="logo">
                        <a href="/">
                            <img src="img/logo.png" alt="LOGO"/>
                        </a>
                    </div>
-                   <div className="menu">
+                   <div className="menu clearfix">
                        <ul className="menu-list">
                            <li><a href="">About</a></li>
                            <li><a href="">Blog</a></li>

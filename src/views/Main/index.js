@@ -14,7 +14,7 @@ class Main extends Component {
                        <hr/>
                        <ul className="item1-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
                            <li><a href=""><mark>house</mark></a></li>
                            <li><a href=""><mark>iste id</mark></a></li>
@@ -27,7 +27,7 @@ class Main extends Component {
                        <hr/>
                        <ul className="item2-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
                            <li><a href=""><mark>house</mark></a></li>
                            <li><a href=""><mark>iste id</mark></a></li>
@@ -40,7 +40,7 @@ class Main extends Component {
                        <hr/>
                        <ul className="item3-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
-                           <li className="second-item"><a href=""><mark>black</mark></a></li>
+                           <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
                            <li><a href=""><mark>house</mark></a></li>
                            <li><a href=""><mark>iste id</mark></a></li>
@@ -63,7 +63,7 @@ class Main extends Component {
                    </div>
                    <div className="tags-list">
                        <h2>Tags</h2>
-                       <ul>
+                       <ul className="tags-list-unordered">
                            <li><a href="">Tag 11</a></li>
                            <li><a href="">Tag 22</a></li>
                            <li><a href="">Tag 33</a></li>

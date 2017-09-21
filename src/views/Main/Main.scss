@@ -6,22 +6,22 @@ body main {
 	margin: 0 auto;
 	background-color: #f7f7f7;
 }
-main .blog-items {
+.blog-items {
 	background-color: #ffffff;
 	width: 75%;
 	float: left;
 }
-.blog-items .item-1 h1 {
+.item-1 h1 {
 	text-align: center;
 	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
-.blog-items .item-1 h1 a {
+.item-1 h1 a {
 	text-decoration: none;
 	color: #808080;
 }
-.blog-items .item-1 p {
+.item-1 p {
 	margin: 0px;
 	width: 700px;
 	text-align: center;
@@ -32,7 +32,7 @@ main .blog-items {
 	top: -5px;
 	font-size: 14px;
 }
-.blog-items .item-1 hr {
+.item-1 hr {
 	width: 500px;
 	display: block;
 	border: 0;
@@ -40,43 +40,43 @@ main .blog-items {
 	position: relative;
 	top: -10px;
 }
-.blog-items .item-1 .item1-list {
+.item1-list {
 	width: 100%;
 	font-size: 16px;
 	letter-spacing: 3px;
 	box-sizing: border-box;
 }
-.blog-items .item-1 .item1-list li {
+.item1-list li {
 	display: inline-block;
 	margin-right: 15px;
 }
-.blog-items .item-1 .item1-list li a {
+.item1-list a {
 	text-decoration: none;
 }
-.blog-items .item-1 .item1-list .second-item {
+.item1-list li:nth-child(2) {
 	border-left: 2px solid #D3D3D3;
 }
-.blog-items .item-1 .item1-list .second-item {
+.item1-list li:nth-child(2) {
 	padding-left: 15px;
 }
-.blog-items .item-1 .item1-list mark {
+.item1-list mark {
 	background-color: #D3D3D3;
 }
-.blog-items .item-1 .item1-list li a mark:hover {
+.item1-list mark:hover {
 	background-color: #ffffff;
 	color: #808080;
 }
-.blog-items .item-2 h1 {
+.item-2 h1 {
 	text-align: center;
 	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
-.blog-items .item-2 h1 a {
+.item-2 h1 a {
 	text-decoration: none;
 	color: #808080;
 }
-.blog-items .item-2 p {
+.item-2 p {
 	margin: 0px;
 	width: 700px;
 	text-align: center;
@@ -87,7 +87,7 @@ main .blog-items {
 	top: -5px;
 	font-size: 14px;
 }
-.blog-items .item-2 hr {
+.item-2 hr {
 	width: 500px;
 	display: block;
 	border: 0;
@@ -95,43 +95,43 @@ main .blog-items {
 	position: relative;
 	top: -10px;
 }
-.blog-items .item-2 .item2-list {
+.item2-list {
 	width: 100%;
 	font-size: 16px;
 	letter-spacing: 3px;
 	box-sizing: border-box;
 }
-.blog-items .item-2 .item2-list li {
+.item2-list li {
 	display: inline-block;
 	margin-right: 15px;
 }
-.blog-items .item-2 .item2-list li a {
+.item2-list a {
 	text-decoration: none;
 }
-.blog-items .item-2 .item2-list .second-item {
+.item2-list li:nth-child(2) {
 	border-left: 2px solid #D3D3D3;
 }
-.blog-items .item-2 .item2-list .second-item {
+.item2-list li:nth-child(2) {
 	padding-left: 15px;
 }
-.blog-items .item-2 .item2-list mark {
+.item2-list mark {
 	background-color: #D3D3D3;
 }
-.blog-items .item-2 .item2-list li a mark:hover {
+.item2-list mark:hover {
 	background-color: #ffffff;
 	color: #808080;
 }
-.blog-items .item-3 h1 {
+.item-3 h1 {
 	text-align: center;
 	background-color: #f7f7f7;
 	margin: 0px;
 	line-height: 50px;
 }
-.blog-items .item-3 h1 a {
+.item-3 h1 a {
 	text-decoration: none;
 	color: #808080;
 }
-.blog-items .item-3 p {
+.item-3 p {
 	margin: 0px;
 	width: 700px;
 	text-align: center;
@@ -142,7 +142,7 @@ main .blog-items {
 	top: -5px;
 	font-size: 14px;
 }
-.blog-items .item-3 hr {
+.item-3 hr {
 	width: 500px;
 	display: block;
 	border: 0;
@@ -150,43 +150,43 @@ main .blog-items {
 	position: relative;
 	top: -10px;
 }
-.blog-items .item-3 .item3-list {
+.item3-list {
 	width: 100%;
 	font-size: 16px;
 	letter-spacing: 3px;
 	box-sizing: border-box;
 }
-.blog-items .item-3 .item3-list li {
+.item3-list li {
 	display: inline-block;
 	margin-right: 15px;
 }
-.blog-items .item-3 .item3-list li a {
+.item3-list a {
 	text-decoration: none;
 }
-.blog-items .item-3 .item3-list .second-item {
+.item3-list li:nth-child(2) {
 	border-left: 2px solid #D3D3D3;
 }
-.blog-items .item-3 .item3-list .second-item {
+.item3-list li:nth-child(2) {
 	padding-left: 15px;
 }
-.blog-items .item-3 .item3-list mark {
+.item3-list mark {
 	background-color: #D3D3D3;
 }
-.blog-items .item-3 .item3-list li a mark:hover {
+.item3-list mark:hover {
 	background-color: #ffffff;
 	color: #808080;
 }
-body main .blog-items div h1 {
+.blog-items h1 {
 	padding-top: 50px;
 }
-main .sidebar {
+.sidebar {
 	width: 20%;
 	float: right;
 	text-align: center;
 	margin-top: 60px;
 	font-size: 12px;
 }
-main .sidebar form input {
+.sidebar input {
 	width: 185px;
 	height: 25px;
 	font-size: 12px;
@@ -194,46 +194,44 @@ main .sidebar form input {
 	border-radius: 15px;
 	border: 1px solid #808080;
 }
-main .sidebar ul {
+.sidebar ul {
 	list-style: none;
 	width: 100%;
+	padding: 0px;
+    margin: 0px;
 }
-main .sidebar .tags-list ul {
-	position: relative;
-	left: -35px;
+.tags-list ul {
 	height: 130px;
 }
-main .sidebar div {
+.sidebar div {
 	padding-top: 25px;
 }
-main .sidebar .tags-list ul li {
+.tags-list li {
 	display: inline-block;
 	padding: 5px;
 	cursor: pointer;
 }
-main .sidebar .tags-list ul li a {
+.tags-list a {
 	font-size: 16px;
 	letter-spacing: 3px;
 	text-decoration: none;
 	background-color: #D3D3D3;
 	color: #171717;
 }
-main .sidebar .tags-list ul li a:hover {
+.tags-list a:hover {
 	background-color: #ffffff;
 	color: #808080;
 }
-main .sidebar .posts-list ul {
-	position: relative;
-	left: -35px;
+.posts-list ul {
 	height: 130px;
 }
-main .blog-items .more-items {
+.more-items {
 	background-color: #f7f7f7;
 	padding-top: 20px;
 	padding-bottom: 40px;
 	text-align: center;
 }
-main .blog-items .more-items button {
+button {
 	height: 30px;
 	width: 165px;
 	border-radius: 15px;
@@ -247,7 +245,7 @@ main .blog-items .more-items button {
 	cursor: pointer;
 	background-color: #ffffff;
 }
-main .blog-items .more-items button:hover {
+button:hover {
 	background-color: #696969;
 	color: #ffffff;
 	border: 2px solid #696969;
