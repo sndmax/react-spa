@@ -10,7 +10,7 @@ import {
     GET_USER_FAILURE,
 } from 'actions/actionConstants';
 
-export const profile = (state = [], action) => {
+export const session = (state = [], action) => {
     const { type, payload } = action;
 
     switch (type) {

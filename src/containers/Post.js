@@ -10,11 +10,21 @@ import {
 } from 'actions/actionConstants';
 
 class Post extends Component {
-    componentDidMount() {
+    loadPost() {
         const { dispatch } = this.props;
         const { id } = this.props.match.params;
 
         dispatch(getPost(id));
+    }
+
+    componentDidMount() {
+        this.loadPost();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.match.params.id !== this.props.match.params.id) {
+            this.loadPost();
+        }
     }
 
     getContent() {

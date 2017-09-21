@@ -49,8 +49,8 @@ class Nav extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        user: store.profile.data,
-        status: store.profile.status
+        user: store.session.data,
+        status: store.session.status
     };
 };
 
