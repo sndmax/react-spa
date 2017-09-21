@@ -1,5 +1,8 @@
 @import '~styles/core.scss';
 
+.app{
+  text-decoration: none;
+}
 .app,
 .app__posts>div {
   transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);

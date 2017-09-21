@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './SidebarPosts.scss';
 
 class SidebarPosts extends Component {
     render() {
+        const populars = this.props.populars;
+
         return (
-            <section className="popular-posts-wrapper">
+            <section className="popular-wrapper">
                 <h2>Popular posts</h2>
-                <span className="popular-posts">
-                    ...
-                </span>
+                {
+                    populars.map(({ id, title, img }
+                    ) => {
+                        return (
+                            <section key={id} className="popular">
+                                <p><Link className="popular-title" to={`/post/${id}`}> {title}</Link></p>
+                                <img alt={title} src={img} className="popular-image" />
+                            </section>
+                        );
+                    })
+                }
             </section>
         );
     }
