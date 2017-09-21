@@ -16,12 +16,12 @@ export default (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
-                <Route path="/posts" component={Posts} />
+                <Route path="/posts" key="all" component={Posts} />
                 <Route path="/post/:id" component={Post} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/profile/" component={Profile} />
                 <Route path="/user/:id" component={User} />
-                <Route path="/tag/:tag" component={Posts} />
+                <Route path="/tag/:tag" key="filtered" component={Posts} />
             </Switch>
         </MainLayout>
     </BrowserRouter>
