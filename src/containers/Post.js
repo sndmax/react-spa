@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import Article from 'views/Article';
 import PreLoader from 'views/PreLoader';
 import { getPost } from 'actions/posts';
+import {
+    STATUS_ERROR,
+    STATUS_LOADING,
+    STATUS_DONE,
+} from 'actions/actionConstants';
 
 class Post extends Component {
     componentDidMount() {
@@ -10,19 +15,19 @@ class Post extends Component {
         const { id } = this.props.match.params;
 
         dispatch(getPost(id));
-    };
+    }
 
     getContent() {
         const { status, post } = this.props;
 
         switch (status) {
-            case 'ERROR':
+            case STATUS_ERROR:
                 return <p>There was an error loading the items</p>;
 
-            case 'LOADING':
+            case STATUS_LOADING:
                 return <PreLoader />;
 
-            case 'DONE_SINGLE':
+            case STATUS_DONE:
                 return <Article post={post} />;
 
             default:
@@ -41,8 +46,8 @@ class Post extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        post: store.posts.items,
-        status: store.posts.status
+        post: store.post.items,
+        status: store.post.status
     };
 };
 

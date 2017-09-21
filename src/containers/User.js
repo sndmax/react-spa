@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Articles from 'views/Articles';
 import PreLoader from 'views/PreLoader';
-import { getPosts } from 'actions/posts';
+import UserPage from 'views/UserPage';
+import { loadUser } from 'actions/user';
 import {
     STATUS_ERROR,
     STATUS_LOADING,
     STATUS_DONE,
 } from 'actions/actionConstants';
 
-class Posts extends Component {
+class User extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
-        this.tag = this.props.match.params.tag || false;
+        const id = this.props.match.params.id;
 
-        dispatch(getPosts(this.tag));
+        dispatch(loadUser(id));
     }
 
     getContent() {
-        const { status, posts } = this.props;
+        const { status, user } = this.props;
 
         switch (status) {
             case STATUS_ERROR:
-                return <p>There was an error loading the items</p>;
+                return <p>Error while loading user profile</p>;
 
             case STATUS_LOADING:
                 return <PreLoader />;
 
             case STATUS_DONE:
-                return <Articles posts={posts} tag={this.tag} />;
+                return <UserPage user={user} />;
 
             default:
                 return <PreLoader />;
@@ -37,18 +37,16 @@ class Posts extends Component {
 
     render() {
         return (
-            <section className="articles">
-                { this.getContent() }
-            </section>
+            <section>{this.getContent()}</section>
         );
     }
 }
 
 const mapStateToProps = (store) => {
     return {
-        posts: store.posts.items,
-        status: store.posts.status
+        user: store.user.data,
+        status: store.user.status
     };
 };
 
-export default connect(mapStateToProps)(Posts);
+export default connect(mapStateToProps)(User);

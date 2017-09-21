@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
 import { reducer as reduxFormReducer } from 'redux-form';
-import { auth } from './signup';
-import { posts } from './posts';
+import { user, profile } from './user';
+import { post, posts } from './posts';
 import { tags } from './tags';
 
 const reducers = combineReducers({
     tags,
-    auth,
+    profile,
+    user,
+    post,
     posts,
     form: reduxFormReducer
 });

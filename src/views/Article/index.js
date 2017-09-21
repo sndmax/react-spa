@@ -5,10 +5,10 @@ import Tags from 'views/Tags';
 
 class Article extends Component {
     render() {
-        const { id, img, date, title, author, tags, content } = this.props.post;
+        const { id, img, date, title, author, author_id, tags, content } = this.props.post;
 
         return (
-            <article key={id.toString()}>
+            <article key={id}>
                 <header>
                     <h1 className="article-title"><Link to={"/post/" + id}>{title}</Link></h1>
                     <img alt={title} src={img} className="article-image"/>
@@ -18,8 +18,8 @@ class Article extends Component {
                 </div>
                 <footer>
                     <div className="article-info">
-                        <a href><Moment format="DD MMM YYYY" unix>{date}</Moment></a>
-                        <a href> by {author}</a>
+                        <Link to=""><Moment format="DD MMM YYYY" unix>{date}</Moment></Link>
+                        <Link to={`/user/${author_id}`}> by {author}</Link>
                         <span className="article-dot" />
                         <Tags tags={tags} />
                     </div>

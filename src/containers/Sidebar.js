@@ -4,6 +4,11 @@ import { getTags } from 'actions/tags';
 import PreLoader from 'views/PreLoader';
 import Tags from 'views/Tags';
 import SearchBar from 'views/SearchBar';
+import {
+    STATUS_ERROR,
+    STATUS_LOADING,
+    STATUS_DONE,
+} from 'actions/actionConstants';
 
 class Sidebar extends Component {
     componentDidMount() {
@@ -15,13 +20,13 @@ class Sidebar extends Component {
         const { tagsStatus, tags } = this.props;
 
         switch (tagsStatus) {
-            case 'ERROR':
+            case STATUS_ERROR:
                 return <p>There was an error loading the tags</p>;
 
-            case 'LOADING':
+            case STATUS_LOADING:
                 return <PreLoader />;
 
-            case 'DONE':
+            case STATUS_DONE:
                 return <Tags type="sidebar" tags={ tags } />;
 
             default:

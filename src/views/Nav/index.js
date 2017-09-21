@@ -27,7 +27,7 @@ class Nav extends Component {
 
         const login = status === STATUS_DONE ? {
             title: user.email,
-            link: '/userpage'
+            link: '/profile'
         } : {
             title: titles.SIGN_UP_TITLE,
             link: '/signup'
@@ -49,8 +49,8 @@ class Nav extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        user: store.auth.data,
-        status: store.auth.status
+        user: store.profile.data,
+        status: store.profile.status
     };
 };
 

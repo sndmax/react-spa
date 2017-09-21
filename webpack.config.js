@@ -10,6 +10,7 @@ const config = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Blog',
             template: 'public/index.html'
         }),
         new ExtractTextPlugin('style.css'),
@@ -25,7 +26,6 @@ const config = {
     resolve: {
         alias: {
             actions: path.resolve(__dirname, 'src/actions'),
-            constants: path.resolve(__dirname, 'src/constants'),
             containers: path.resolve(__dirname, 'src/containers'),
             views: path.resolve(__dirname, 'src/views'),
             reducers: path.resolve(__dirname, 'src/reducers'),
