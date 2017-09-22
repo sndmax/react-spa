@@ -59,8 +59,8 @@ class SignUp extends Component {
 
 const mapStateToProps = (store) => {
     return {
-        status: store.profile.status,
-        data: store.profile.data
+        status: store.session.status,
+        data: store.session.data
     };
 };
 

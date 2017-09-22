@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
     entry: {
@@ -16,8 +17,11 @@ const config = {
         new ExtractTextPlugin('style.css'),
         new CopyWebpackPlugin([
             { from: 'src/resources/data.json' },
-            { from: 'src/resources/img/logo.jpg', to: 'img/' }
-        ])
+            { from: 'src/resources/img/logo.jpg', to: 'img/' },
+            { from: 'node_modules/font-awesome/fonts', to: 'fonts' },
+            { from: 'node_modules/font-awesome/css/font-awesome.min.css' },
+        ]),
+        new UglifyJSPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
@@ -88,7 +92,7 @@ const config = {
                 })
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
                 use: [
                     'url-loader?limit=10000',
                     'img-loader'
