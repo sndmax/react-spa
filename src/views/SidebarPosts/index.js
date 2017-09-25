@@ -14,7 +14,7 @@ class SidebarPosts extends Component {
                     ) => {
                         return (
                             <section key={id} className="popular">
-                                <p><Link className="popular-title" to={`/post/${id}`}> {title}</Link></p>
+                                <h3><Link className="popular-title" to={`/post/${id}`}> {title}</Link></h3>
                                 <img alt={title} src={img} className="popular-image" />
                             </section>
                         );

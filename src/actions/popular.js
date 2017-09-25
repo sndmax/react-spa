@@ -38,7 +38,15 @@ export const getPopulars = () => {
                 return response;
             })
             .then((response) => response.json())
-            .then((response) => dispatch(getPopularSuccess(response.posts)))
+            .then((response) => {
+                const populars = response.posts;
+                const sorted = populars.slice(0);
+                sorted.sort((a, b) => {
+                    return b.views - a.views;
+                });
+                const top = sorted.slice(0, 3);
+                return dispatch(getPopularSuccess(top));
+            })
             .catch((response) => dispatch(getPopularFailure(response)));
     };
 };

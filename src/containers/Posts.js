@@ -7,7 +7,6 @@ import { getPosts } from 'actions/posts';
 class Posts extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
-
         dispatch(getPosts());
     }
 
