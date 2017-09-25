@@ -94,5 +94,5 @@ export const getPost = (id) => {
                 });
             })
             .catch((response) => dispatch(getPostFailure(response)));
-    }
+    };
 };
