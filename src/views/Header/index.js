@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Header.scss';
 
@@ -8,14 +9,14 @@ class Header extends Component {
            <header>
                <div className="header-items clearfix">
                    <div className="logo">
-                       <a href="/">
+                       <Link to="">
                            <img src="img/logo.png" alt="LOGO"/>
-                       </a>
+                       </Link>
                    </div>
                    <div className="menu clearfix">
                        <ul className="menu-list">
-                           <li><a href="">About</a></li>
-                           <li><a href="">Blog</a></li>
+                           <li><Link to="">About</Link></li>
+                           <li><Link to="">Blog</Link></li>
                        </ul>
                        <button>Sign in</button>
                    </div>
