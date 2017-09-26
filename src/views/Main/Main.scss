@@ -1,17 +1,4 @@
-$font-color: #808080;
-$font-color-wh: #ffffff;
-$sidebar-font-color: #D3D3D3;
-$tags-font-color: #171717;
-
-$background-color: #f7f7f7;
-$background-color-wh: #ffffff;
-$background-color-mark-tag: #D3D3D3;
-$background-color-button: #696969;
-
-$border-color-item: #D3D3D3;
-$border-color-input: #808080;
-$border-color-button: #808080;
-$border-color-button-hover: #696969;
+@import '../Variables/Variables';
 
 html, body {
 	background-color: $background-color;
@@ -21,7 +8,7 @@ body main {
 	margin: 0 auto;
 	background-color: $background-color;
 }
-.blog-items {
+.BlogItem {
 	background-color: $background-color-wh;
 	width: 75%;
 	float: left;
@@ -29,44 +16,42 @@ body main {
 			padding-top: 50px;
 		}
 }
-.item-1,
-.item-2,
-.item-3 {
-		h1 {
-			text-align: center;
-			background-color: $background-color;
-			margin: 0px;
-			line-height: 50px;
-				a {
+.blog-item {
+	h1 {
+		text-align: center;
+		background-color: $background-color;
+		margin: 0px;
+		line-height: 50px;
+			a {
 				text-decoration: none;
 				color: $font-color;
-				}
+			}
 		}
-		p {
-			margin: 0px;
-			width: 700px;
-			text-align: center;
-			padding: 30px 10px;
-			line-height: 30px;
-			white-space: pre-wrap;
-			position: relative;
-			top: -5px;
-			font-size: 14px;
-		}
-		hr {
-			width: 500px;
-			display: block;
-			border: 0;
-			border-top: 1px solid $border-color-item;
-			position: relative;
-			top: -10px;
-		}
+	p {
+		margin: 0px;
+		width: 700px;
+		text-align: center;
+		padding: 30px 10px;
+		line-height: 30px;
+		white-space: pre-wrap;
+		position: relative;
+		top: -5px;
+		font-size: $p-items-font-size;
+	}
+	hr {
+		width: 500px;
+		display: block;
+		border: 0;
+		border-top: 1px solid $border-color-item;
+		position: relative;
+		top: -10px;
+	}
 }
 .item1-list,
 .item2-list,
 .item3-list {
 	width: 100%;
-	font-size: 16px;
+	font-size: $items-list-font-size;
 	letter-spacing: 3px;
 	box-sizing: border-box;
 		li {
@@ -93,46 +78,46 @@ body main {
 	float: right;
 	text-align: center;
 	margin-top: 60px;
-	font-size: 12px;
-			input {
-				width: 185px;
-				height: 25px;
-				font-size: 12px;
-				color: $sidebar-font-color;
-				border-radius: 15px;
-				border: 1px solid $border-color-input;
-			}
-			 ul {
-				list-style: none;
-				width: 100%;
-				padding: 0px;
-				margin: 0px;
-			}
-			div {
-				padding-top: 25px;
-			}
+	font-size: $sidebar-font-size;
+		input {
+			width: 185px;
+			height: 25px;
+			font-size: $sidebar-font-size;
+			color: $sidebar-font-color;
+			border-radius: 15px;
+			border: 1px solid $border-color-input;
+		}
+		ul {
+			list-style: none;
+			width: 100%;
+			padding: 0px;
+			margin: 0px;
+		}
+		div {
+			padding-top: 25px;
+		}
 }
 .tags-list {
-			ul {
-				height: 130px;
-			}
+	ul {
+		height: 130px;
+	}
 
-			li {
-				display: inline-block;
-				padding: 5px;
-				cursor: pointer;
-			}
-			a {
-				font-size: 16px;
-				letter-spacing: 3px;
-				text-decoration: none;
-				background-color: $background-color-mark-tag;
-				color: $tags-font-color;
-			}
-			a:hover {
-             	background-color: $background-color-wh;
-             	color: $font-color;
-             }
+	li {
+		display: inline-block;
+		padding: 5px;
+		cursor: pointer;
+	}
+	a {
+		font-size: $tags-font-size;
+		letter-spacing: 3px;
+		text-decoration: none;
+		background-color: $background-color-mark-tag;
+		color: $tags-font-color;
+	}
+	a:hover {
+		background-color: $background-color-wh;
+		color: $font-color;
+    }
 }
 .posts-list ul {
 	height: 130px;
@@ -151,7 +136,7 @@ button {
 	font-family: Open Sans, sans-serif;
 	color: $font-color;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: $button-font-size;
 	font-weight: bold;
 	letter-spacing: 3px;
 	cursor: pointer;

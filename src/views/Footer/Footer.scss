@@ -1,6 +1,4 @@
-$background-color-wh: #ffffff;
-$border-color-wh: #ffffff;
-$font-color: #808080;
+@import '../Variables/Variables';
 
 footer {
 	clear: both;
@@ -9,7 +7,7 @@ footer {
 	border: 1px solid $border-color-wh;
 	font-family: Open Sans, sans-serif;
 	color: $font-color;
-    font-size: 12px;
+	font-size: $footer-font-size;
 		 p {
 			width: 100%;
 			height: 100%;
