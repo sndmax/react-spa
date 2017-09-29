@@ -17,6 +17,7 @@ export default (
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/posts" key="all" component={Posts} />
+                <Route path="/page/:id" key="pages" component={Posts} />
                 <Route path="/post/:id" component={Post} />
                 <Route path="/signup" component={SignUp} />
                 <Route path="/profile/" component={Profile} />

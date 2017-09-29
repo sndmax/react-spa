@@ -10,28 +10,41 @@ import {
 } from 'actions/actionConstants';
 
 class Posts extends Component {
-    componentDidMount() {
+    loadPosts() {
+        const postsPerPage = 4;
         const { dispatch } = this.props;
-        this.tag = this.props.match.params.tag || false;
+        const { id, tag } = this.props.match.params;
+        const options = {
+            tag: tag,
+            limit: postsPerPage,
+            page: id
+        };
 
-        dispatch(getPosts(this.tag));
+        dispatch(getPosts(options));
+    }
+
+    componentDidMount() {
+        this.loadPosts();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.match.params.id !== this.props.match.params.id) {
+            this.loadPosts();
+        }
     }
 
     getContent() {
         const { status, posts } = this.props;
-
         switch (status) {
             case STATUS_ERROR:
                 return <p>There was an error loading the items</p>;
 
+            default:
             case STATUS_LOADING:
                 return <PreLoader />;
 
             case STATUS_DONE:
                 return <Articles posts={posts} tag={this.tag} />;
-
-            default:
-                return <PreLoader />;
         }
     }
 

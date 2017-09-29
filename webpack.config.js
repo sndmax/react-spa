@@ -115,7 +115,7 @@ if (isDevelopment) {
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
 } else {
     config.devtool = 'source-map';
-    config.plugins.push(new CleanWebpackPlugin(['dist']));
+    //config.plugins.push(new CleanWebpackPlugin(['dist']));
     config.plugins.push(new UglifyJSPlugin({ sourceMap: true }));
 }
 
