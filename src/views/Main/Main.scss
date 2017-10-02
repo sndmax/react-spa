@@ -8,7 +8,7 @@ body main {
 	margin: 0 auto;
 	background-color: $background-color;
 }
-.BlogItem {
+.blogs {
 	background-color: $background-color-wh;
 	width: 75%;
 	float: left;
@@ -29,7 +29,7 @@ body main {
 		}
 	p {
 		margin: 0px;
-		width: 700px;
+		width: 97.2%;
 		text-align: center;
 		padding: 30px 10px;
 		line-height: 30px;
@@ -39,7 +39,7 @@ body main {
 		font-size: $p-items-font-size;
 	}
 	hr {
-		width: 500px;
+		width: 69.4%;
 		display: block;
 		border: 0;
 		border-top: 1px solid $border-color-item;
@@ -47,9 +47,7 @@ body main {
 		top: -10px;
 	}
 }
-.item1-list,
-.item2-list,
-.item3-list {
+.item-list {
 	width: 100%;
 	font-size: $items-list-font-size;
 	letter-spacing: 3px;
@@ -80,7 +78,7 @@ body main {
 	margin-top: 60px;
 	font-size: $sidebar-font-size;
 		input {
-			width: 185px;
+			width: 100%;
 			height: 25px;
 			font-size: $sidebar-font-size;
 			color: $sidebar-font-color;
@@ -101,7 +99,6 @@ body main {
 	ul {
 		height: 130px;
 	}
-
 	li {
 		display: inline-block;
 		padding: 5px;

@@ -10,11 +10,6 @@ header {
 	height: 150px;
 	margin: 0 auto;
 }
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
 .logo {
 	width: 30%;
 	float: left;
@@ -42,7 +37,7 @@ header {
 			color: $font-color;
 		}
 		li {
-			width: 75px;
+			width: 14.88%;
 			text-transform: uppercase;
 			display: inline-block;
 		}

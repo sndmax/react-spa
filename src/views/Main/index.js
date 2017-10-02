@@ -6,13 +6,13 @@ class Main extends Component {
     render() {
         return (
            <main>
-               <div className="BlogItem">
+               <div className="blogs">
                    <div className="blog-item">
                        <h1><a href="">Lorem ipsum dolor sit amet</a></h1>
                        <a href=""><img src="img/mountains-clouds-forest-fog.jpg" alt="pic1"/></a>
                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iusto optio, sed totam debitis perferendis in voluptatibus exercitationem dolores aspernatur aliquid, porro fuga molestias consequuntur atque culpa repudiandae fugiat sit! Voluptatibus numquam tenetur voluptate ut vel voluptas libero nulla quisquam. Illo fugiat autem esse voluptatum voluptas atque, commodi minus natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                        <hr/>
-                       <ul className="item1-list">
+                       <ul className="item-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
                            <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
@@ -25,7 +25,7 @@ class Main extends Component {
                        <a href=""><img src="img/black-and-white-animal-dog-pet.jpg" alt="pic2"/></a>
                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iusto optio, sed totam debitis perferendis in voluptatibus exercitationem dolores aspernatur aliquid, porro fuga molestias consequuntur atque culpa repudiandae fugiat sit! Voluptatibus numquam tenetur voluptate ut vel voluptas libero nulla quisquam. Illo fugiat autem esse voluptatum voluptas atque, commodi minus natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                        <hr/>
-                       <ul className="item2-list">
+                       <ul className="item-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
                            <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
@@ -38,7 +38,7 @@ class Main extends Component {
                        <a href=""><img src="img/pexels-photo-331991.jpeg" alt="pic3"/></a>
                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iusto optio, sed totam debitis perferendis in voluptatibus exercitationem dolores aspernatur aliquid, porro fuga molestias consequuntur atque culpa repudiandae fugiat sit! Voluptatibus numquam tenetur voluptate ut vel voluptas libero nulla quisquam. Illo fugiat autem esse voluptatum voluptas atque, commodi minus natus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                        <hr/>
-                       <ul className="item3-list">
+                       <ul className="item-list">
                            <li>21 Aug 2017 by Kallistos Gurmeet</li>
                            <li><a href=""><mark>black</mark></a></li>
                            <li><a href=""><mark>new</mark></a></li>
