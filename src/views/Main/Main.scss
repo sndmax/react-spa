@@ -1,0 +1,146 @@
+@import '~styles/core.scss';
+
+html, body {
+	background-color: $background-color;
+}
+body main {
+	width: 960px;
+	margin: 0 auto;
+	background-color: $background-color;
+}
+.blogs {
+	background-color: $background-color-wh;
+	width: 75%;
+	float: left;
+		 h1 {
+			padding-top: 50px;
+		}
+}
+.blog-item {
+	h1 {
+		text-align: center;
+		background-color: $background-color;
+		margin: 0px;
+		line-height: 50px;
+			a {
+				text-decoration: none;
+				color: $font-color;
+			}
+		}
+	p {
+		margin: 0px;
+		width: 97.2%;
+		text-align: center;
+		padding: 30px 10px;
+		line-height: 30px;
+		white-space: pre-wrap;
+		position: relative;
+		top: -5px;
+		font-size: $p-items-font-size;
+	}
+	hr {
+		width: 69.4%;
+		display: block;
+		border: 0;
+		border-top: 1px solid $border-color-item;
+		position: relative;
+		top: -10px;
+	}
+}
+.item-list {
+	width: 100%;
+	font-size: $items-list-font-size;
+	letter-spacing: 3px;
+	box-sizing: border-box;
+		li {
+			display: inline-block;
+			margin-right: 15px;
+		}
+		a {
+			text-decoration: none;
+		}
+		mark {
+			background-color: $background-color-mark-tag;
+		}
+		li:nth-child(2) {
+			padding-left: 15px;
+			border-left: 2px solid $border-color-item;
+		}
+		mark:hover {
+			background-color: $background-color-wh;
+			color: $font-color;
+		}
+}
+.sidebar {
+	width: 20%;
+	float: right;
+	text-align: center;
+	margin-top: 60px;
+	font-size: $sidebar-font-size;
+		input {
+			width: 100%;
+			height: 25px;
+			font-size: $sidebar-font-size;
+			color: $sidebar-font-color;
+			border-radius: 15px;
+			border: 1px solid $border-color-input;
+		}
+		ul {
+			list-style: none;
+			width: 100%;
+			padding: 0px;
+			margin: 0px;
+		}
+		div {
+			padding-top: 25px;
+		}
+}
+.tags-list {
+	ul {
+		height: 130px;
+	}
+	li {
+		display: inline-block;
+		padding: 5px;
+		cursor: pointer;
+	}
+	a {
+		font-size: $tags-font-size;
+		letter-spacing: 3px;
+		text-decoration: none;
+		background-color: $background-color-mark-tag;
+		color: $tags-font-color;
+	}
+	a:hover {
+		background-color: $background-color-wh;
+		color: $font-color;
+    }
+}
+.posts-list ul {
+	height: 130px;
+}
+.more-items {
+	background-color: $background-color;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+button {
+	height: 30px;
+	width: 165px;
+	border-radius: 15px;
+	border: 2px solid $border-color-button;
+	font-family: Open Sans, sans-serif;
+	color: $font-color;
+	text-transform: uppercase;
+	font-size: $button-font-size;
+	font-weight: bold;
+	letter-spacing: 3px;
+	cursor: pointer;
+	background-color: $background-color-wh;
+		&:hover {
+			background-color: $background-color-button;
+			color: $font-color-wh;
+			border: 2px solid $border-color-button-hover;
+		}
+}
