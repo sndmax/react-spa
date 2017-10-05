@@ -1,37 +1,64 @@
 @import '~styles/core.scss';
 
 .userpage {
-  padding: 30px 40px;
-  background-color: white;
-  b {
-    padding: 10px;
-  }
+    float: left;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding: 21px;
+    width: 70%;
+    background-color: white;
+    font-size: 1em;
 }
-.userpage-image {
-  margin: 35px 35px 0px 0px;
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-}
-
-.userpage-header {
-
-}
-
-.userpage-user-posts {
-  ul {
-    list-style: none;
-      li>a {
-        text-decoration: none;
-        color: $base-font-color;
-        font-size: $base-font-size;
-        transition: 0.2s;
-        padding: 5px;
-        &:hover {
-          margin-left: 10px;
-          color: #eaeaea;
-          background-color: $primary-font-color;
-      }
+.profile {
+    .profile__header {
+        text-align: center;
     }
-  }
+    .profile__avatar {
+        margin-right: 45px;
+        float: right;
+        background: url('../../../dist/avatar.jpg') no-repeat 13% 88.5%;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 3px solid $base-font-color;
+    }
+    .profile__info {
+        margin-top: 25px;
+        line-height: 1;
+        width: 35%;
+        margin-left: 15px;
+            .profile__info--bold {
+                font-weight: bold;
+            }
+    }
+}
+.profile__about {
+    .profile__about__header {
+        margin-top: 45px;
+        text-align: center;
+    }
+    .profile__about__text {
+        margin: 0px;
+        padding: 0px 35px;
+    }
+    .profile__about--font_size {
+        font-size: $profile-about-text-font-size;
+    }
+}
+.profile__posts {
+    .profile__posts__header {
+        text-align: center;
+    }
+    .profile__posts__list {
+        margin-left: 15px;
+            a {
+            text-decoration: none;
+            color: $base-font-color;
+            font-size: $base-font-size;
+                .profile__posts__list__date {
+                    font-weight: bold;
+                    font-size: $profile-posts-list-font-size;
+                }
+            }
+    }
 }

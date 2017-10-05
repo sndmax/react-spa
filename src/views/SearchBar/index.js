@@ -8,6 +8,8 @@ class Search extends Component {
             <input
                 type="text"
                 placeholder="Search by tags"
+                defaultValue="Search by tags"
+                onChange=" "
             />
         );
     }

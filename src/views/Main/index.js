@@ -50,7 +50,7 @@ class Main extends Component {
                </div>
                <div className="sidebar">
                    <form action="">
-                       <input type="text" name="search" value="  Search..."/>
+                       <input type="text" name="search" defaultValue="  Search..."/>
                    </form>
                    <div className="posts-list">
                        <h2>Popular posts</h2>

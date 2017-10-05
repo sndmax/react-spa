@@ -18,7 +18,7 @@ input:-webkit-autofill:active {
   .auth-form-input {
     outline: none;
     background: transparent;
-    width:100%;
+    width: 75%;
     height: 30px;
     border: none;
     position: relative;
@@ -62,6 +62,7 @@ input:-webkit-autofill:active {
 }
 
 .auth-form-buttons button{
+  vertical-align: middle;
   outline: none;
   margin: 5px 0px 0px 0px;
   align-items: center;
@@ -83,4 +84,12 @@ input:-webkit-autofill:active {
     border: none;
     color: grey;
   }
+}
+.row {
+  width: 75%;
+  float: left;
+
+}
+.col-xs-12 {
+  margin-top: 40px;
 }
