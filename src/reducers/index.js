@@ -4,6 +4,7 @@ import { user, session } from './user';
 import { post, posts } from './posts';
 import { tags } from './tags';
 import { popular } from './popular';
+import { comments } from './comments';
 
 const reducers = combineReducers({
     tags,
@@ -12,6 +13,7 @@ const reducers = combineReducers({
     user,
     post,
     posts,
+    comments,
     form: reduxFormReducer
 });
 

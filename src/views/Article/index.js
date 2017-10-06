@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import Tags from 'views/Tags';
+import Comments from 'containers/Comments';
 
 class Article extends Component {
     render() {
@@ -24,6 +25,7 @@ class Article extends Component {
                         <Tags tags={tags} />
                     </div>
                 </footer>
+                <Comments post_id={id} />
             </article>
         );
     }
