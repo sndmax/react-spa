@@ -6,19 +6,16 @@ header {
 	color: $font-color;
 }
 .header-items {
-
 	height: 150px;
 	margin: 0 auto;
 }
 .logo {
-
 	float: left;
 	font-size: 0px;
 	letter-spacing: 0;
 	line-height: 0;
 }
 .menu {
-
 	float: right;
 	font-weight: bold;
 	letter-spacing: 5px;
@@ -28,7 +25,6 @@ header {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-
 	display: inline-block;
 	text-align: right;
 		a {
@@ -36,7 +32,6 @@ header {
 			color: $font-color;
 		}
 		li {
-
 			text-transform: uppercase;
 			display: inline-block;
 		}
