@@ -143,14 +143,14 @@ button {
 	letter-spacing: 3px;
 	cursor: pointer;
 	background-color: $background-color-wh;
+	line-height: 1;
 		&:hover {
 			background-color: $background-color-button;
 			color: $font-color-wh;
 			border: 2px solid $border-color-button-hover;
 		}
 }
-
-
+/*
 @media screen and (max-width: 800px) {
 	body main {
     	width: 100%;
@@ -182,3 +182,4 @@ button {
     }
 
 }
+*/

@@ -6,21 +6,20 @@ header {
 	color: $font-color;
 }
 .header-items {
-	width: 960px;
+
 	height: 150px;
 	margin: 0 auto;
 }
 .logo {
-	width: 30%;
+
 	float: left;
 	font-size: 0px;
 	letter-spacing: 0;
 	line-height: 0;
 }
 .menu {
-	width: 70%;
+
 	float: right;
-	font-size: $header-font-size;
 	font-weight: bold;
 	letter-spacing: 5px;
 	padding-top: 60px;
@@ -29,30 +28,22 @@ header {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	width: 75%;
+
 	display: inline-block;
-	text-align: center;
+	text-align: right;
 		a {
 			text-decoration: none;
 			color: $font-color;
 		}
 		li {
-			width: 15%;
+
 			text-transform: uppercase;
 			display: inline-block;
 		}
-		li:first-child {
-         	padding-left: 0.3em;
-         	margin-right: 3em;
-         	margin-left: 11.8em;
+		li:last-child {
+			padding-right: 70px;
         }
-        li:hover {
-         	border-bottom: 2px solid $border-color;
-        }
-}
-
-@media screen and (max-width: 800px) {
-	.header-items {
-    	width: 100%;
-    }
+        span:hover {
+			border-bottom: 2px solid #808080;
+		}
 }
