@@ -20,18 +20,18 @@ class Userpage extends Component {
                 <div className="c-userpage__info">
                     <h2 className="c-userpage__header c-userpage__header--padding">Blogger&#39;s info&#58;</h2>
                     <div className="c-userpage__avatar"></div>
-                    <ul className="c-userpage__card">
+                    <ul className="c-card">
                         <li>
-                            <span className="c-userpage__field">First Name:</span>
-                            <p className="c-userpage__value c-userpage__value--bold">Julia</p>
+                            <span className="c-card__field">First Name:</span>
+                            <p className="c-card__value c-card__value--bold">Julia</p>
                         </li>
                 		<li>
-                            <span className="c-userpage__field">Last Name:</span>
-                			<p className="c-userpage__value c-userpage__value--bold">Hodikova</p>
+                            <span className="c-card__field">Last Name:</span>
+                			<p className="c-card__value c-card__value--bold">Hodikova</p>
                 		</li>
                 		<li>
-                		    <span className="c-userpage__field">E-mail address:</span>
-                			<p className="c-userpage__value c-userpage__value--bold">jhodikova@mail.ru</p>
+                		    <span className="c-card__field">E-mail address:</span>
+                			<p className="c-card__value c-card__value--bold">jhodikova@mail.ru</p>
                 		</li>
                     </ul>
                 </div>
