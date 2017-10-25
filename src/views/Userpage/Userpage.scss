@@ -1,6 +1,6 @@
 @import '~styles/core.scss';
 
-.userpage {
+.c-userpage {
     float: left;
     margin-top: 55px;
     margin-bottom: 55px;
@@ -9,11 +9,8 @@
     background-color: white;
     font-size: 1em;
 }
-.profile {
-    .profile__header {
-        text-align: center;
-    }
-    .profile__avatar {
+.c-userpage__info {
+    .c-userpage__avatar {
         margin-right: 45px;
         float: right;
         background: url('../../../dist/avatar.jpg') no-repeat 13% 88.5%;
@@ -22,43 +19,45 @@
         border-radius: 50%;
         border: 3px solid $base-font-color;
     }
-    .profile__info {
+    .c-userpage__card {
         margin-top: 25px;
         line-height: 1;
         width: 35%;
         margin-left: 15px;
-            .profile__info--bold {
+            .c-userpage__field {
+                line-height: 2;
+            }
+            .c-userpage__value--bold {
                 font-weight: bold;
             }
     }
 }
-.profile__about {
-    .profile__about__header {
-        margin-top: 45px;
-        text-align: center;
-    }
-    .profile__about__text {
-        margin: 0px;
-        padding: 0px 35px;
-    }
-    .profile__about--font_size {
-        font-size: $profile-about-text-font-size;
-    }
+.c-userpage__about {
+    padding-top: 25px;
+        .c-userpage__text {
+            margin: 0px;
+            padding: 0px 35px;
+        }
+        .c-userpage__text--font_size {
+            font-size: $profile-about-text-font-size;
+        }
 }
-.profile__posts {
-    .profile__posts__header {
-        text-align: center;
-    }
-    .profile__posts__list {
-        margin-left: 15px;
-            a {
-            text-decoration: none;
-            color: $base-font-color;
-            font-size: $base-font-size;
-                .profile__posts__list__date {
-                    font-weight: bold;
-                    font-size: $profile-posts-list-font-size;
-                }
+.l-list {
+    margin-left: 15px;
+    margin-bottom: 30px;
+        a {
+        text-decoration: none;
+        color: $base-font-color;
+        font-size: $base-font-size;
+            .l-list__item {
+                font-weight: bold;
+                font-size: $profile-posts-list-font-size;
             }
-    }
+        }
+}
+.c-userpage__header {
+    text-align: center;
+}
+.c-userpage__header--padding {
+    padding-bottom: 15px;
 }
