@@ -1,44 +1,44 @@
 @import '~styles/core.scss';
 
-header {
-	background-color: $background-color-wh;
-	font-family: Open Sans, sans-serif;
-	color: $font-color;
+.c-header {
+    background-color: $background-color-wh;
+    font-family: Open Sans, sans-serif;
+    color: $font-color;
 }
-.header-items {
-	height: 150px;
-	margin: 0 auto;
+.c-header__items {
+    height: 150px;
+    margin: 0 auto;
 }
-.logo {
-	float: left;
-	font-size: 0px;
-	letter-spacing: 0;
-	line-height: 0;
+.c-header__logo {
+    float: left;
+    font-size: 0px;
+    letter-spacing: 0;
+    line-height: 0;
 }
-.menu {
-	float: right;
-	font-weight: bold;
-	letter-spacing: 5px;
-	padding-top: 60px;
+.c-header__menu {
+    float: right;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 60px;
 }
-.menu-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: inline-block;
-	text-align: right;
-		a {
-			text-decoration: none;
-			color: $font-color;
-		}
-		li {
-			text-transform: uppercase;
-			display: inline-block;
-		}
-		li:last-child {
-			padding-right: 70px;
-		}
-		span:hover {
-			border-bottom: 2px solid #808080;
-		}
+.c-header__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: right;
+        a {
+            text-decoration: none;
+            color: $font-color;
+        }
+        li {
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        li:last-child {
+            padding-right: 57px;
+        }
+        span:hover {
+            border-bottom: 2px solid #808080;
+        }
 }

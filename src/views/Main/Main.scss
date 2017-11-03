@@ -8,50 +8,50 @@ body main {
 	margin: 0 auto;
 	background-color: $background-color;
 }
-.blogs {
+.c-blogs {
 	background-color: $background-color-wh;
-	width: 75%;
 	float: left;
 		 h1 {
 			padding-top: 50px;
 		}
 }
-.blog-item {
-	h1 {
-		text-align: center;
-		background-color: $background-color;
-		margin: 0px;
-		line-height: 50px;
-			a {
-				text-decoration: none;
-				color: $font-color;
+.c-blogs__item {
+	padding: 0px;
+		h1 {
+			text-align: center;
+			background-color: $background-color;
+			margin: 0px;
+			line-height: 50px;
+				a {
+					text-decoration: none;
+					color: $font-color;
+				}
 			}
+		p {
+			margin: 0px;
+			width: 100%;
+			text-align: center;
+			padding: 30px 20px;
+			line-height: 30px;
+			white-space: pre-wrap;
+			position: relative;
+			top: -5px;
+			font-size: $p-items-font-size;
 		}
-	p {
-		margin: 0px;
-		width: 97.2%;
-		text-align: center;
-		padding: 30px 10px;
-		line-height: 30px;
-		white-space: pre-wrap;
-		position: relative;
-		top: -5px;
-		font-size: $p-items-font-size;
-	}
-	hr {
-		width: 69.4%;
-		display: block;
-		border: 0;
-		border-top: 1px solid $border-color-item;
-		position: relative;
-		top: -10px;
-	}
-	img {
-		width: 100%;
-	}
+		hr {
+			width: 69.4%;
+			display: block;
+			border: 0;
+			border-top: 1px solid $border-color-item;
+			position: relative;
+			top: -10px;
+		}
+		img {
+			width: 100%;
+		}
 }
-.item-list {
-	width: 100%;
+.c-blogs__list {
+	padding: 0px;
 	font-size: $items-list-font-size;
 	letter-spacing: 3px;
 	box-sizing: border-box;
@@ -74,8 +74,10 @@ body main {
 			color: $font-color;
 		}
 }
-.sidebar {
-	width: 25%;
+.c-blogs_post-info--align {
+	text-align: center;
+}
+.c-sidebar {
 	float: right;
 	text-align: center;
 	margin-top: 60px;
@@ -83,7 +85,6 @@ body main {
 	font-size: $sidebar-font-size;
 	box-sizing: border-box;
 		input {
-			width: 90%;
 			height: 25px;
 			font-size: $sidebar-font-size;
 			color: $sidebar-font-color;
@@ -92,7 +93,6 @@ body main {
 		}
 		ul {
 			list-style: none;
-			width: 100%;
 			padding: 0px;
 			margin: 0px;
 		}
@@ -100,10 +100,7 @@ body main {
 			padding-top: 25px;
 		}
 }
-.tags-list {
-	ul {
-		height: 130px;
-	}
+.c-sidebar__tag-list {
 	li {
 		display: inline-block;
 		padding: 5px;
@@ -121,10 +118,10 @@ body main {
 		color: $font-color;
     }
 }
-.posts-list ul {
+.c-sidebar__list {
 	height: 130px;
 }
-.more-items {
+.c-blogs__more {
 	background-color: $background-color;
 	padding-top: 20px;
 	padding-bottom: 40px;
@@ -150,36 +147,11 @@ button {
 			border: 2px solid $border-color-button-hover;
 		}
 }
-/*
-@media screen and (max-width: 800px) {
-	body main {
-    	width: 100%;
-    	margin: 0;
-    	padding: 0;
+@media screen and (max-width: 767px) {
+    .c-sidebar {
+		margin-top: 0px;
     }
-    .blogs {
-    	float: none;
-    	width: 100%;
-    		h1 {
-    			width: 100%;
-			}
-    }
-    .sidebar {
-    	float: none;
-    	width: 100%;
-			input {
-				width: 60%;
-			}
-			.tags-list {
-				width: 50%;
-				float: right;
-				margin-right: 5%;
-			}
-			.posts-list {
-				width: 45%;
-				float: left;
-			}
-    }
-
+	.container {
+		width: auto;
+	}
 }
-*/

@@ -5,9 +5,11 @@ import './Footer.scss';
 class Footer extends Component {
     render() {
         return (
-           <footer>
-               <div><p>&copy; 2017 All rights reserved.</p></div>
-           </footer>
+            <footer>
+                <div className="container">
+                    <p className="col-xs-12">&copy; 2017 All rights reserved.</p>
+                </div>
+            </footer>
         );
     }
 }
